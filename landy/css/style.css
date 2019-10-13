@@ -1,0 +1,365 @@
+/* -------- General styles ---------  */
+body{
+background-color: #000;
+}
+
+h1{
+    margin-top: 30px;
+	color: #fff;
+}
+
+h1, h2, h3, h4{
+	font-family: 'Franklin Gothic Medium', sans-serif;
+}
+/* -------- Container's styles ---------  */
+.container-total{
+  background-color: #000;
+  width: 100%;
+}
+
+.container-about{
+    height:700px;
+    background-image: url(../img/hourses1.jpg);
+    background-size: 100% 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.container-title{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.container-social{
+  background-color: #E6E6FA;
+  width: 100%;
+}
+
+.divider{
+	background-image: url('../img/divider-pattern.png');
+	background-repeat: repeat-x;
+	height: 4px;
+	width: 100%;
+}
+
+.line{
+    display: inline-block;
+	background-image: url('../img/line-pattern.png');
+	background-repeat: repeat-x;;
+	height: 2px;
+	width: 25%;
+}
+.line-yellow{
+    display: inline-block;
+	background-image: url('../img/line-pattern-yellow.png');
+	background-repeat: repeat-x;
+	height: 2px;
+	width: 25%;
+}
+
+#social .line{
+	margin-bottom: 45px;
+}
+
+
+#gallery .line-yellow{
+	margin-bottom: 10px;
+}
+
+.icon{
+    display: inline-block;
+    padding: 20px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width:25%;
+}
+
+/*--- Gallery styles ---*/
+
+.gallery {
+    margin-top:20px;
+    margin-left:50px;
+    margin-right:50px;
+    padding-bottom:50px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+}
+.gallery__img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+.gallery__item {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end:0
+}
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--2 {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.gallery__item--4 {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+.gallery__item--6 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery__item--5 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 8;
+}
+.gallery__item--7 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 8;
+    grid-row-end: 10;
+}
+.gallery__item--3 {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 10;
+}
+
+/* -------- Top navbar styles ---------  */
+
+.navbar .brand{
+	margin-top:10px;
+	margin-left:5px;
+}
+
+/* -------- Page styles ---------  */
+
+#heading, #screenshots, #features, #download{
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	padding:20px 0;
+}
+
+#screenshots h1{
+	padding-bottom: 5px;
+}
+
+.row{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+	padding:10px 0;
+	width:100%;
+}
+
+.central{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:200;
+  margin-top: 10px;
+}
+
+/* -------- Footer styles ---------  */
+
+footer{
+	background-color: #1b1b1b;
+	color: #999999;
+}
+
+footer .span12{
+	text-align: center;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+}
+
+#social li a{
+	background-image: url(../img/icons/icon-instagram.png);
+	background-repeat: no-repeat;
+	display: block;
+	height: 96px;
+	width: 96px;
+}
+
+#social li a.instagram-icon{
+	background-position: 0px 0px;
+}
+
+#social li a:hover.instagram-icon{
+	background-position: 0px -96px;
+}
+
+
+ /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+
+      .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+		padding-top: 15px;
+	}
+
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      footer {
+      	margin-left: -20px;
+		margin-right: -20px;
+      }
+
+      footer .container{
+      	margin-left: 10px;
+		margin-right: 10px;
+      }
+    
+    }
+
+
+    @media (max-width: 767px) {
+
+    	.navbar .brand{
+			font-family: 'Merienda', cursive;
+			font-size: 24px; 
+		}
+
+    	.carousel {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 100px;
+        top: 50px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 16px;
+      }
+
+      #screenshots .span2{
+      	padding-bottom: 10px;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+    .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 55%;
+        padding: 0 100px;
+        position: absolute;
+        top: 50px;
+      }
+      .carousel-caption h1 {
+        font-size: 20px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 14px;
+      }
+
+
+      .inline li{
+      	padding-bottom: 10px;
+      }
+
+      .form-inline button{
+      	margin-top: 10px;
+      }
+    }
+
+/*--- Приложение к лошадям ---*/
+@keyframes fadeIm-1{
+    from    { opacity: 1; }
+    16%     { opacity: 1; }
+    25%     { opacity: 0; }
+    91%     { opacity: 0; }
+    to      { opacity: 1; }
+}
+
+@keyframes fadeIm-2{
+    from    { opacity: 0; }
+    16%     { opacity: 0; }
+    25%     { opacity: 1; }
+    41%     { opacity: 1; }
+    50%     { opacity: 0; }
+    to      { opacity: 0; }
+}
+
+@keyframes fadeIm-3{
+    from    { opacity: 0; }
+    41%     { opacity: 0; }
+    50%     { opacity: 1; }
+    66%     { opacity: 1; }
+    75%     { opacity: 0; }
+    to      { opacity: 0; }
+}
+
+@keyframes fadeIm-4{
+    from    { opacity: 0; }
+    66%     { opacity: 0; }
+    75%     { opacity: 1; }
+    91%     { opacity: 1; }
+    to      { opacity: 0; }
+}
+
+.div-style{
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.img-style{
+    width: 95%;
+    margin-top: -260px;
+
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+}
+
+.img-style.next{
+    position: absolute;
+    left: 0px;
+}
