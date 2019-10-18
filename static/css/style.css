@@ -18,7 +18,7 @@ h1, h2, h3, h4{
 }
 
 .container-about{
-    height:700px;
+    height:100vh;
     background-image: url("../img/Hourses1.jpg");
     background-size: 100% 100%;
     text-align: center;
@@ -148,15 +148,11 @@ h1, h2, h3, h4{
 
 /* -------- Page styles ---------  */
 
-#heading, #screenshots, #features, #download{
+#heading{
     margin-left: auto;
     margin-right: auto;
 	text-align: center;
 	padding:20px 0;
-}
-
-#screenshots h1{
-	padding-bottom: 5px;
 }
 
 .row{
@@ -180,14 +176,6 @@ h1, h2, h3, h4{
 footer{
 	background-color: #1b1b1b;
 	color: #999999;
-}
-
-footer .span12{
-	text-align: center;
-	margin-top: 20px;
-	margin-right: auto;
-	margin-left: auto;
-	width: 100%;
 }
 
 #social li a{
@@ -234,63 +222,24 @@ footer .span12{
 
 
     @media (max-width: 767px) {
-
+        #social li a{
+	        height: 64px;
+	        width: 64px;
+        }
+        .fadein {
+            height: 80vw;
+        }
+        .container-about{
+            height:80vw;
+        }
     	.navbar .brand{
 			font-family: 'Merienda', cursive;
 			font-size: 24px; 
 		}
-
-    	.carousel {
-			margin-left: -20px;
-			margin-right: -20px;
-		}
-
-      .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 65%;
-        padding: 0 100px;
-        top: 50px;
-      }
-      .carousel-caption h1 {
-        font-size: 30px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 16px;
-      }
-
-      #screenshots .span2{
-      	padding-bottom: 10px;
-      }
-
     }
 
     @media (max-width: 480px) {
 
-    .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 55%;
-        padding: 0 100px;
-        position: absolute;
-        top: 50px;
-      }
-      .carousel-caption h1 {
-        font-size: 20px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 14px;
-      }
       .inline li{
       	padding-bottom: 10px;
       }
@@ -309,12 +258,13 @@ footer .span12{
 }
 
 .fadein {
-    margin_top:40px;
-    position:relative;
-    width:70%;
+    margin-top: 40px;
+    position: relative;
+    width: 60%;
+    height: 80vh;
 }
 
-.fadein img { position:absolute; width:100%; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 16s; animation-iteration-count: infinite; }
+.fadein img { position:absolute; height:100%; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 16s; animation-iteration-count: infinite; }
 .fadein img:nth-child(1) { animation-delay: 0s; }
 .fadein img:nth-child(2) { animation-delay: 4s; }
 .fadein img:nth-child(3) { animation-delay: 8s;}
