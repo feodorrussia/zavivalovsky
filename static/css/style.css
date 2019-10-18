@@ -19,7 +19,7 @@ h1, h2, h3, h4{
 
 .container-about{
     height:700px;
-    background-image: url(../img/Hourses1.jpg);
+    background-image: url("../img/Hourses1.jpg");
     background-size: 100% 100%;
     text-align: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ h1, h2, h3, h4{
 	background-image: url('../img/line-pattern.png');
 	background-repeat: repeat-x;;
 	height: 2px;
-	width: 25%;
+	width: 20%;
 }
 .line-yellow{
     display: inline-block;
@@ -68,7 +68,7 @@ h1, h2, h3, h4{
 
 .icon{
     display: inline-block;
-    padding: 20px 0px;
+    padding: 30px 20px;
     margin-left: auto;
     margin-right: auto;
     width:25%;
@@ -309,57 +309,16 @@ footer .span12{
     }
 
 /*--- Приложение к лошадям ---*/
-@keyframes fadeIm-1{
-    from    { opacity: 1; }
-    16%     { opacity: 1; }
-    25%     { opacity: 0; }
-    91%     { opacity: 0; }
-    to      { opacity: 1; }
+@keyframes fade {
+  0% { opacity: 0; }
+  11.11% { opacity: 1; }
+  33.33% { opacity: 1; }
+  44.44% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-@keyframes fadeIm-2{
-    from    { opacity: 0; }
-    16%     { opacity: 0; }
-    25%     { opacity: 1; }
-    41%     { opacity: 1; }
-    50%     { opacity: 0; }
-    to      { opacity: 0; }
-}
-
-@keyframes fadeIm-3{
-    from    { opacity: 0; }
-    41%     { opacity: 0; }
-    50%     { opacity: 1; }
-    66%     { opacity: 1; }
-    75%     { opacity: 0; }
-    to      { opacity: 0; }
-}
-
-@keyframes fadeIm-4{
-    from    { opacity: 0; }
-    66%     { opacity: 0; }
-    75%     { opacity: 1; }
-    91%     { opacity: 1; }
-    to      { opacity: 0; }
-}
-
-.div-style{
-    display: inline-block;
-    position: relative;
-    width: 55%;
-    margin-left: 50px;
-    margin-bottom: 20px;
-}
-
-.img-style{
-    width: 95%;
-    margin-top: -260px;
-
-    animation-duration: 24s;
-    animation-iteration-count: infinite;
-}
-
-.img-style.next{
-    position: absolute;
-    left: 0px;
-}
+.fadein {position:relative; width:70%; margin-top:40px}
+.fadein img { position:absolute; width:100%; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 9s; animation-iteration-count: infinite; }
+.fadein img:nth-child(1) { animation-delay: 0s; }
+.fadein img:nth-child(2) { animation-delay: 3s; }
+.fadein img:nth-child(3) { animation-delay: 6s;

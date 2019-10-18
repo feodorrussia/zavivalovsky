@@ -13,7 +13,8 @@
     <style>
       body {
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }</style>
+      }
+    </style>
     <link href="{{ url_for( 'static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
@@ -46,7 +47,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="\index"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=40 width=40/></a>
+        <a class="brand" href="\index"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=40
+                                            width=40/></a>
         <div class="nav-collapse collapse">
             <ul class="nav pull-right">
                 <li class="active"><a href="\index">Главная</a></li>
@@ -69,17 +71,13 @@
 <div class="container-total">
 
     <!-- Stallions -->
-    <div id="stallions" style="background: #202020;margin-left: 50px;margin-right: 50px;">
-        <div class="div-style">
-            <img src="{{ url_for( 'static', filename='img/stallions/1_1.jpg')}}" title="Image 1" class="img-style im-1" style="animation-name: fadeIm-1;">
-            <img src="{{ url_for( 'static', filename='img/stallions/2_1.jpg')}}" title="Image 2" class="img-style next im-2"
-                 style="animation-name: fadeIm-2;">
-            <img src="{{ url_for( 'static', filename='img/stallions/3_1.jpg')}}" title="Image 3" class="img-style next im-3"
-                 style="animation-name: fadeIm-3;">
-            <img src="{{ url_for( 'static', filename='img/stallions/4_1.jpg')}}" title="Image 4" class="img-style next im-4"
-                 style="animation-name: fadeIm-4;">
+    <div id="stallions" style="display:flex; background: #202020;margin-left: 50px;margin-right: 50px;">
+        <div class="fadein">
+            <img src="{{ url_for( 'static', filename='img/stallions/1_1.jpg')}}">
+            <img src="{{ url_for( 'static', filename='img/stallions/2_1.jpg')}}">
+            <img src="{{ url_for( 'static', filename='img/stallions/3_1.jpg')}}">
         </div>
-        <div style="display: inline-block; width: 29%;padding:10px 0;margin-top:40px">
+        <div style="width: 29%;padding:10px 0;margin-top:40px">
             <h1 align="center" style="color:#ffc000;margin-bottom:40px">Продажа лошадей</h1>
             <div style="display: inline-block; width: 19%;padding:10px;margin-left:20px" align="center">
                 <a href="\popcorn" style="color:#fff;"><h2 align="left" style="font-weight:100;margin-bottom:30px;">
@@ -115,16 +113,26 @@
         </div>
 
         <div class="gallery">
-            <figure class="gallery__item gallery__item--1"><img src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--2"><img src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--3"><img src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></figure>
-            <figure class="gallery__item gallery__item--4"><img src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/></figure>
-            <figure class="gallery__item gallery__item--5"><img src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--6"><img src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/></figure>
-            <figure class="gallery__item gallery__item--7"><img src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--8"><img src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--9"><img src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--10"><img src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></figure>
+            <figure class="gallery__item gallery__item--1"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></figure>
+            <figure class="gallery__item gallery__item--2"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></figure>
+            <figure class="gallery__item gallery__item--3"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></figure>
+            <figure class="gallery__item gallery__item--4"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/></figure>
+            <figure class="gallery__item gallery__item--5"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/></figure>
+            <figure class="gallery__item gallery__item--6"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/></figure>
+            <figure class="gallery__item gallery__item--7"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/></figure>
+            <figure class="gallery__item gallery__item--8"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></figure>
+            <figure class="gallery__item gallery__item--9"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></figure>
+            <figure class="gallery__item gallery__item--10"><img
+                    src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></figure>
         </div>
     </div>
 </div>
@@ -172,6 +180,7 @@
             event.preventDefault();
         });
       });
+
 
 
 
