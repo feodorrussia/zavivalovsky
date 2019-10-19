@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Попкорн</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ url_for( 'static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }</style>
+    <link href="{{ url_for( 'static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
+    <link href="{{ url_for( 'static', filename='css/style.css')}}" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.png">
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="\index"><img src="\img/icons/icon-home.png" height=40 width=40/></a>
+        <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+                <li class="active"><a href="/index">Главная</a></li>
+                <li><a href="/about">История</a></li>
+                <li><a href="/sale">Продажа</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="#social">Контакты</a></li>
+            </ul><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+<!-- Page items -->
+<div class="container-total">
+    <div style="background: #404040" align="center">
+        <img style="heigth: 50vh;" src="{{ url_for( 'static', filename='img/stallion/popcorn.png')}}" alt="">
+    </div>
+    <!-- About items -->
+    <div id="about">
+        <div style="padding-top:200px;" align="center">
+            <h1>Попкорн</h1>
+            <p class="lead">История Завиваловского</p>
+        </div>
+    </div>
+</div>
+<!-- Contacts -->
+
+<!-- Social link -->
+<div id="social" class="container-social" align="center">
+    <div class="line"></div>
+    <div class="icon" align="center">
+        <ul class="inline">
+            <li><a class="instagram-icon" href="https://www.instagram.com/zavivalovesky/"></a></li>
+        </ul>
+    </div>
+    <div class="line"></div>
+</div>
+
+<!-- Footer items  -->
+<footer>
+    <div id="contacts" align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
+        <h1 style="margin: 0 0; padding-top: 10px;">"ЗАВИВАЛОВСКИЙ"</h1>
+        <div class="line-yellow"></div>
+        <h2 style="color: #fff">ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h2>
+        <p style="color: #fff;font-weight:500">РОССИЯ</p>
+        <p style="color: #fff;font-weight:300">Пензенская область, Каменский район</p>
+        <p style="color: #fff;font-weight:300">село Завиваловка, улица Совхозная 10</p>
+        <p style="color: #fff;font-weight:300">Email zavivalovesky@mail.ru</p>
+        <p style="color: #fff;font-weight:300">Телефон +7 *** ***-**-**</p>
+    </div>
+    <div style="width: 100%;height: 100px;background-color: #404040"></div>
+
+</footer>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+<script src="{{ url_for( 'static', filename='js/bootstrap.min.js')}}"></script>
+<script src="{{ url_for( 'static', filename='js/jquery.easing.1.3.js')}}"></script>
+<script type="{{ url_for( 'static', filename='text/javascript')}}">
+      $(document).ready(function() {
+        $('a[href^="#"]').click(function(event) {
+            var id = $(this).attr("href");
+            var offset = 60;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({scrollTop:target}, 800, $.easing.easeInOutExpo());
+            event.preventDefault();
+        });
+      });
+</script>
+
+
+</body>
+</html>
