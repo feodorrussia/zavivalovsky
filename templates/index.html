@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Zavivalovsky</title>
+    <title>ПКЗ "Завиваловский"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -52,8 +52,8 @@
         <div class="nav-collapse collapse">
             <ul class="nav pull-right">
                 <li class="active"><a href="\index">Главная</a></li>
-                <li><a href="#about">История</a></li>
-                <li><a href="#stallions">Продажа</a></li>
+                <li><a href="/about">История</a></li>
+                <li><a href="/sale">Продажа</a></li>
                 <li><a href="#gallery">Галерея</a></li>
                 <li><a href="#social">Контакты</a></li>
             </ul><!--/.nav-collapse -->
@@ -73,10 +73,10 @@
     <!-- Stallions -->
     <div id="stallions" style="display:flex; background: #202020;margin-left: 50px;margin-right: 50px;">
         <div class="fadein">
-            <img src="{{ url_for( 'static', filename='img/stallions/1_1.jpg')}}" alt="Попкорн">
-            <img src="{{ url_for( 'static', filename='img/stallions/2_1.jpg')}}" alt="Прелат">
-            <img src="{{ url_for( 'static', filename='img/stallions/3_1.jpg')}}" alt="Упрёк">
-            <img src="{{ url_for( 'static', filename='img/stallions/4_1.jpg')}}" alt="Крекер">
+            <img src="{{ url_for( 'static', filename='img/stallions/1_1.jpg')}}" alt="Попкорн" onclick="location.href='\popcorn'">
+            <img src="{{ url_for( 'static', filename='img/stallions/2_1.jpg')}}" alt="Прелат" onclick="location.href='\prelat'">
+            <img src="{{ url_for( 'static', filename='img/stallions/3_1.jpg')}}" alt="Упрёк" onclick="location.href='\uprek'">
+            <img src="{{ url_for( 'static', filename='img/stallions/4_1.jpg')}}" alt="Крекер" onclick="location.href='\kreker'">
         </div>
         <div style="width: 29%;padding:10px 0;margin-top:40px">
             <h1 align="center" style="color:#ffc000;margin-bottom:40px">Продажа лошадей</h1>
@@ -100,7 +100,7 @@
     <div id="about" class="container-about">
         <div style="padding-top:200px;" align="center">
             <h1>"ЗАВИВАЛОВСКИЙ" ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h1>
-            <p class="lead">История Завиваловского</p>
+            <p class="lead"></p>
         </div>
     </div>
 
@@ -151,14 +151,14 @@
 <!-- Footer items  -->
 <footer>
     <div id="contacts" align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
-        <h1 style="margin: 0 0; padding-top: 10px;">"ЗАВИВАЛОВСКИЙ"</h1>
+        <h1 style="margin: 0 0; padding-top: 30px;">"ЗАВИВАЛОВСКИЙ"</h1>
         <div class="line-yellow"></div>
         <h2 style="color: #fff">ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h2>
-        <p style="color: #fff;font-weight:500">РОССИЯ</p>
+        <p style="color: #fff;font-weight:500;padding-top: 20px;">РОССИЯ</p>
         <p style="color: #fff;font-weight:300">Пензенская область, Каменский район</p>
         <p style="color: #fff;font-weight:300">село Завиваловка, улица Совхозная 10</p>
-        <p style="color: #fff;font-weight:300">Email zavivalovesky@mail.ru</p>
-        <p style="color: #fff;font-weight:300">Телефон +7 *** ***-**-**</p>
+        <p style="color: #fff;font-weight:400;padding-top: 10px;">Email zavivalovesky@mail.ru</p>
+        <p style="color: #fff;font-weight:400;padding-top: 10px;">Телефон +7 *** ***-**-**</p>
     </div>
     <div style="width: 100%;height: 100px;background-color: #404040"></div>
 
@@ -182,7 +182,7 @@
         });
       });
 </script>
-<link rel="stylesheet" href="/static/css/style.css?ver=130" type="text/css" />
+<link rel="stylesheet" href="/static/css/style.css?ver=134" type="text/css" />
 
 
 </body>

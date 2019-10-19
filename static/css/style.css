@@ -28,6 +28,7 @@ h1, h2, h3, h4{
 .container-title{
   width: 100%;
   margin-top: 30px;
+  height: 90vh;
 }
 
 .container-social{
@@ -178,7 +179,7 @@ footer{
 	color: #999999;
 }
 
-#social li a{
+#social li a{ /*rework*/
 	background-image: url(../img/icons/icon-instagram.png);
 	background-repeat: no-repeat;
 	display: block;
@@ -258,7 +259,7 @@ footer{
 }
 
 .fadein {
-    margin-top: 40px;
+    margin: 40px 0;
     position: relative;
     width: 60%;
     height: 80vh;
@@ -268,4 +269,4 @@ footer{
 .fadein img:nth-child(1) { animation-delay: 0s; }
 .fadein img:nth-child(2) { animation-delay: 4s; }
 .fadein img:nth-child(3) { animation-delay: 8s;}
-.fadein img:nth-child(4) { animation-delay: 12s;
+.fadein img:nth-child(4) { animation-delay: 12s;}

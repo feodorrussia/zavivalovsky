@@ -17,6 +17,23 @@ def popcorn():
     return render_template('popcorn.html')
 
 
+@app.route('/uprek')
+def uprek():
+    return render_template('uprek.html')
+
+@app.route('/prelat')
+def prelat():
+    return render_template('prelat.html')
+
+@app.route('/kreker')
+def kreker():
+    return render_template('kreker.html')
+
+@app.route('/sale')
+def sale():
+    return render_template('sale.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 '''port=8080, host='127.0.0.1'''
