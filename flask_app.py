@@ -25,6 +25,10 @@ def uprek():
 def prelat():
     return render_template('prelat.html')
 
+@app.route('/dakar')
+def dakar():
+    return render_template('dakar.html')
+
 @app.route('/kreker')
 def kreker():
     return render_template('kreker.html')

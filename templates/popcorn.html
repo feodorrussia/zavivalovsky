@@ -46,7 +46,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="\index"><img src="\img/icons/icon-home.png" height=40 width=40/></a>
+        <a class="brand" href="\index"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=40 width=40/></a>
         <div class="nav-collapse collapse">
             <ul class="nav pull-right">
                 <li><a href="/index">Главная</a></li>
@@ -60,20 +60,39 @@
 </div>
 
 <!-- Page items -->
-<div class="container-total">
-    <div style="background: #404040" align="center">
-        <img style="heigth: 50vh;" src="{{ url_for( 'static', filename='img/stallion/popcorn.png')}}" alt="">
+<div class="container-total" style="background: #404040;display: flex">
+    <div style="padding-top:20px" align="center">
+        <img style="height: 80vh;padding: 40px 50px;" src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" alt="">
     </div>
-    <!-- About items -->
-    <div id="about">
-        <div style="padding-top:200px;" align="center">
-            <h1>Попкорн</h1>
-            <p class="lead">История Завиваловского</p>
-        </div>
+    <div style="background: #000;width:45%;height:60vh;margin-left: 50px;margin-top:15vh">
+        <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;">Попкорн</h1>
+        <p style="color: #fff;font-weight:500;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
+        <p style="color: #fff;font-weight:500;padding-left: 7vw;">Родился 1 января 2018 года</p>
+        <p style="color: #fff;font-weight:500;padding-left: 7vw;">Родители Пеон 19, Паутинка</p>
+        <p style="color: #fff;font-weight:600;padding-left: 7vw;">Цена: 100 000 р.</p>
     </div>
 </div>
 <!-- Contacts -->
-
+<div id="contacts" align="center">
+    <div style="display:inline-block;padding:30px 30px;width: 20%;">
+        <img style="width: 100%;" src="{{ url_for( 'static', filename='img/staff/trainer.jpg')}}" alt="">
+        <p style="color: #fff;font-weight: 500">Директор ПКЗ "Завиваловский"</p>
+        <p style="color: #fff;font-weight: 300">И.И.Петров</p>
+        <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
+    </div>
+    <div style="display:inline-block;padding:10px 30px;width: 20%;">
+        <img style="width: 100%;" src="{{ url_for( 'static', filename='img/staff/trainer.jpg')}}" alt="">
+        <p style="color: #fff;font-weight: 500">Тренер</p>
+        <p style="color: #fff;font-weight: 300">И.И.Иванов</p>
+        <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
+    </div>
+    <div style="display:inline-block;padding:10px 30px;width: 20%;">
+        <img style="width: 100%;" src="{{ url_for( 'static', filename='img/staff/trainer.jpg')}}" alt="">
+        <p style="color: #fff;font-weight: 500">Тренер</p>
+        <p style="color: #fff;font-weight: 300">И.И.Иванов</p>
+        <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
+    </div>
+</div>
 <!-- Social link -->
 <div id="social" class="container-social" align="center">
     <div class="line"></div>
@@ -87,7 +106,7 @@
 
 <!-- Footer items  -->
 <footer>
-    <div id="contacts" align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
+    <div align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
         <h1 style="margin: 0 0; padding-top: 10px;">"ЗАВИВАЛОВСКИЙ"</h1>
         <div class="line-yellow"></div>
         <h2 style="color: #fff">ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h2>
