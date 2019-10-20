@@ -14,6 +14,7 @@
       body {
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
+
     </style>
     <link href="{{ url_for( 'static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
@@ -23,7 +24,8 @@
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <![endif]
+    <script type="text/javascript" src="{{ url_for( 'static', filename='js/carusel.js')}}"></script>-->
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144"
@@ -53,6 +55,7 @@
             <ul class="nav pull-right">
                 <li class="active"><a href="\index">Главная</a></li>
                 <li><a href="/about">История</a></li>
+                <li><a href="/news">Новости</a></li>
                 <li><a href="/sale">Продажа</a></li>
                 <li><a href="#gallery">Галерея</a></li>
                 <li><a href="#social">Контакты</a></li>
@@ -73,10 +76,14 @@
     <!-- Stallions -->
     <div id="stallions" style="display:flex; background: #202020;margin-left: 50px;margin-right: 50px;">
         <div class="fadein">
-            <img src="{{ url_for( 'static', filename='img/stallions/1_1.jpg')}}" alt="Попкорн" onclick="location.href='\popcorn'">
-            <img src="{{ url_for( 'static', filename='img/stallions/2_1.jpg')}}" alt="Прелат" onclick="location.href='\prelat'">
-            <img src="{{ url_for( 'static', filename='img/stallions/3_1.jpg')}}" alt="Упрёк" onclick="location.href='\uprek'">
-            <img src="{{ url_for( 'static', filename='img/stallions/4_1.jpg')}}" alt="Крекер" onclick="location.href='\kreker'">
+            <img src="{{ url_for( 'static', filename='img/stallions/1_1.jpg')}}" alt="Попкорн"
+                 onclick="location.href='\popcorn'">
+            <img src="{{ url_for( 'static', filename='img/stallions/2_1.jpg')}}" alt="Прелат"
+                 onclick="location.href='\prelat'">
+            <img src="{{ url_for( 'static', filename='img/stallions/3_1.jpg')}}" alt="Упрёк"
+                 onclick="location.href='\uprek'">
+            <img src="{{ url_for( 'static', filename='img/stallions/4_1.jpg')}}" alt="Крекер"
+                 onclick="location.href='\kreker'">
         </div>
         <div style="width: 29%;padding:10px 0;margin-top:40px">
             <h1 align="center" style="color:#ffc000;margin-bottom:40px">Продажа лошадей</h1>
@@ -100,7 +107,7 @@
     <div id="about" class="container-about">
         <div style="padding-top:200px;" align="center">
             <h1>"ЗАВИВАЛОВСКИЙ" ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h1>
-            <p class="lead"></p>
+            <p class="lead">...</p>
         </div>
     </div>
 
@@ -114,27 +121,34 @@
         </div>
 
         <div class="gallery">
-            <figure class="gallery__item gallery__item--1"><img
+            <figure class="gallery__item gallery__item--1"><img class="image"
                     src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--2"><img
+            <figure class="gallery__item gallery__item--2"><img class="image"
                     src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--3"><img
+            <figure class="gallery__item gallery__item--3"><img class="image"
                     src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></figure>
-            <figure class="gallery__item gallery__item--4"><img
+            <figure class="gallery__item gallery__item--4"><img class="image"
                     src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/></figure>
-            <figure class="gallery__item gallery__item--5"><img
+            <figure class="gallery__item gallery__item--5"><img class="image"
                     src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--6"><img
+            <figure class="gallery__item gallery__item--6"><img class="image"
                     src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/></figure>
-            <figure class="gallery__item gallery__item--7"><img
+            <figure class="gallery__item gallery__item--7"><img class="image"
                     src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--8"><img
-                    src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--9"><img
-                    src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></figure>
-            <figure class="gallery__item gallery__item--10"><img
-                    src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></figure>
+            <figure class="gallery__item gallery__item--8"><img class="image"
+                    src="{{ url_for( 'static', filename='img/gallery/HL_8.png')}}"/></figure>
+            <figure class="gallery__item gallery__item--9"><img class="image"
+                    src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/></figure>
+            <figure class="gallery__item gallery__item--10"><img class="image"
+                    src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}"/></figure>
         </div>
+    </div>
+
+    <!-- News block -->
+    <div class="news" align="center" onclick="location.href='\news'">
+        <h1 style="color:#ffc000;padding-top:20vh;margin-bottom:30px">ЖИЗНЬ ЖИВОТНЫХ И ЛЮДЕЙ ПКЗ "ЗАВИВАЛОВСКИЙ"</h1>
+        <div class="line-yellow"></div>
+        <p style="margin-top:20px">...</p>
     </div>
 </div>
 <!-- Social link -->
@@ -181,8 +195,9 @@
             event.preventDefault();
         });
       });
+
 </script>
-<link rel="stylesheet" href="/static/css/style.css?ver=134" type="text/css" />
+<link rel="stylesheet" href="/static/css/style.css?ver=143" type="text/css"/>
 
 
 </body>
