@@ -15,6 +15,7 @@
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
 
+
     </style>
     <link href="{{ url_for( 'static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
@@ -107,7 +108,11 @@
     <div id="about" class="container-about">
         <div style="padding-top:200px;" align="center">
             <h1>"ЗАВИВАЛОВСКИЙ" ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h1>
-            <p class="lead">...</p>
+            <p style="color: #fff">...</p>
+            <img src="{{ url_for( 'static', filename='img/icons/readmore_1.png')}}" style="margin-top:30px;width:200px"
+                 onmouseout="this.src='{{ url_for( 'static', filename='img/icons/readmore_1.png')}}'; this.width=200;"
+                 onmouseover="this.src='{{ url_for( 'static', filename='img/icons/readmore_2.png')}}'; this.width=200;"
+                 onclick="location.href='\about'"/>
         </div>
     </div>
 
@@ -122,25 +127,35 @@
 
         <div class="gallery">
             <figure class="gallery__item gallery__item--1"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--2"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--3"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--4"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--5"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--6"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--7"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--8"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_8.png')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_8.png')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--9"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/></figure>
+                                                                src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/>
+            </figure>
             <figure class="gallery__item gallery__item--10"><img class="image"
-                    src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}"/></figure>
+                                                                 src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}"/>
+            </figure>
         </div>
     </div>
 
@@ -148,16 +163,17 @@
     <div class="news" align="center" onclick="location.href='\news'">
         <h1 style="color:#ffc000;padding-top:20vh;margin-bottom:30px">ЖИЗНЬ ЖИВОТНЫХ И ЛЮДЕЙ ПКЗ "ЗАВИВАЛОВСКИЙ"</h1>
         <div class="line-yellow"></div>
-        <p style="margin-top:20px">...</p>
+        <p style="color: #fff;margin-top:20px">...</p>
     </div>
 </div>
 <!-- Social link -->
 <div id="social" class="container-social" align="center">
     <div class="line"></div>
     <div class="icon" align="center">
-        <ul class="inline">
-            <li><a class="instagram-icon" href="https://www.instagram.com/zavivalovesky/"></a></li>
-        </ul>
+        <img src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}" style="width:96px"
+             onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}'; this.width=96;"
+             onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}'; this.width=96;"
+             onclick="location.href='https://www.instagram.com/zavivalovesky/'"/>
     </div>
     <div class="line"></div>
 </div>
@@ -196,8 +212,9 @@
         });
       });
 
+
 </script>
-<link rel="stylesheet" href="/static/css/style.css?ver=143" type="text/css"/>
+<link rel="stylesheet" href="/static/css/style.css?ver=146" type="text/css"/>
 
 
 </body>

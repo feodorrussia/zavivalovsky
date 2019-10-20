@@ -13,7 +13,8 @@
     <style>
       body {
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }</style>
+      }
+    </style>
     <link href="{{ url_for( 'static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
@@ -46,11 +47,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="\index"><img src="\img/icons/icon-home.png" height=40 width=40/></a>
+        <a class="brand" href="\index"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=40
+                                            width=40/></a>
         <div class="nav-collapse collapse">
             <ul class="nav pull-right">
                 <li><a href="/index">Главная</a></li>
-                <li class="active"><a href="/about">История</a></li>
+                <li><a href="/about">История</a></li>
                 <li><a href="/sale">Продажа</a></li>
                 <li><a href="/news">Новости</a></li>
                 <li><a href="#social">Контакты</a></li>
@@ -61,19 +63,43 @@
 
 <!-- Page items -->
 <div class="container-total">
-    <div style="background: #404040" align="center">
-        <img style="heigth: 50vh;" src="{{ url_for( 'static', filename='img/stallion/popcorn.png')}}" alt="">
+    <div style="margin-top:80px;margin-bottom:30px;" align="center">
+        <h1>НАША ИСТОРИЯ</h1>
     </div>
-    <!-- About items -->
-    <div id="about">
-        <div style="padding-top:200px;" align="center">
-            <h1>Попкорн</h1>
-            <p class="lead">История Завиваловского</p>
+    <!-- Начало -->
+    <div style="background: #202020;display: flex">
+        <div align="center">
+            <img style="height: 50vh;padding: 20px 50px;"
+                 src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}" alt="">
+        </div>
+        <div style="background: #000;width:50%;height:40vh;margin-top: auto;margin-bottom: auto;">
+            <h1 style="color: #ffc000;" align="center">Начало</h1>
+            <p style="color: #fff;font-weight:500" align="center">...</p>
+        </div>
+    </div>
+    <!-- Начало -->
+    <div style="background: #000;display: flex">
+        <div style="background: #202020;width:50%;height:40vh;margin-top: auto;margin-bottom: auto;margin-left: 20px;">
+            <h1 style="color: #ffc000;" align="center">Корм</h1>
+            <p style="color: #fff;font-weight:500" align="center">...</p>
+        </div>
+        <div align="center">
+            <img style="height: 50vh;padding: 20px 50px;"
+                 src="{{ url_for( 'static', filename='img/gallery/HL_14.png')}}" alt="">
+        </div>
+    </div>
+    <!-- Начало -->
+    <div style="background: #202020;display: flex">
+        <div align="center">
+            <img style="height: 50vh;padding: 20px 50px;"
+                 src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}" alt="">
+        </div>
+        <div style="background: #000;width:50%;height:40vh;margin-top: auto;margin-bottom: auto;">
+            <h1 style="color: #ffc000;" align="center">Тренинг</h1>
+            <p style="color: #fff;font-weight:500" align="center">...</p>
         </div>
     </div>
 </div>
-<!-- Contacts -->
-
 <!-- Social link -->
 <div id="social" class="container-social" align="center">
     <div class="line"></div>
@@ -87,7 +113,7 @@
 
 <!-- Footer items  -->
 <footer>
-    <div id="contacts" align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
+    <div align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
         <h1 style="margin: 0 0; padding-top: 10px;">"ЗАВИВАЛОВСКИЙ"</h1>
         <div class="line-yellow"></div>
         <h2 style="color: #fff">ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h2>
@@ -118,6 +144,7 @@
             event.preventDefault();
         });
       });
+
 </script>
 
 
