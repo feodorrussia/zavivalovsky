@@ -58,6 +58,10 @@ h1, h2, h3, h4{
 	width: 25%;
 }
 
+#social .line{
+	margin-bottom: 45px;
+}
+
 
 #gallery .line-yellow{
 	margin-bottom: 10px;
