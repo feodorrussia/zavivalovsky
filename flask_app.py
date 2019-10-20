@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'any random string'
 
 
-
+@app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
@@ -35,7 +35,7 @@ def dakar():
 @app.route('/kreker')
 def kreker():
     return render_template('kreker.html')
-@app.route('/')
+
 @app.route('/sale')
 def sale():
     return render_template('sale.html')
