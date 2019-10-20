@@ -97,9 +97,10 @@
 <div id="social" class="container-social" align="center">
     <div class="line"></div>
     <div class="icon" align="center">
-        <ul class="inline">
-            <li><a class="instagram-icon" href="https://www.instagram.com/zavivalovesky/"></a></li>
-        </ul>
+        <img src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}" style="width:96px"
+             onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}'; this.width=96;"
+             onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}'; this.width=96;"
+             onclick="location.href='https://www.instagram.com/zavivalovesky/'"/>
     </div>
     <div class="line"></div>
 </div>
