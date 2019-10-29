@@ -19,6 +19,7 @@
 
 
 
+
     </style>
     <link href="{{ url_for( 'static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
@@ -46,32 +47,30 @@
 <body>
 
 <!-- Header -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="\index"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=40
-                                            width=40/></a>
-        <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-                <li class="active"><a href="\index">Главная</a></li>
-                <li><a href="\about">История</a></li>
-                <li><a href="\news">Новости</a></li>
-                <li><a href="\index">Продажа</a></li>
-                <li><a href="#gallery">Галерея</a></li>
-                <li><a href="#social">Контакты</a></li>
-            </ul><!--/.nav-collapse -->
-        </div>
+<div class="header">
+    <a class="home" href="\index"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=40
+                                        width=40/></a>
+    <img id="menu_button" style="position:absolute;right:0px;" src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=40
+                                        width=40/>
+</div>
+
+<div class="popup_menu">
+    <div class="popup_bg_menu"></div>
+    <div class="menu">
+        <a style="color:#fff;"><h2 style="margin-top:100px;">ПРОДАЖА</h2></a>
+        <div class="line-yellow"></div>
+        <a style="color:#fff"><h2>ИСТОРИЯ</h2></a>
+        <div class="line-yellow"></div>
+        <a style="color:#fff"><h2>НОВОСТИ</h2></a>
+        <div class="line-yellow"></div>
+        <a style="color:#fff"><h2>КОНТАКТЫ</h2></a>
     </div>
 </div>
 
 <!-- Title -->
 <div class="container-title">
-    <img class="central" src="{{ url_for( 'static', filename='img/logo1.png')}}" alt="">
-    <img class="central" src="{{ url_for( 'static', filename='img/fon_title1.jpg')}}" alt="">
+    <img class="central" style="height:200px;" src="{{ url_for( 'static', filename='img/logo1.png')}}" alt="">
+    <img class="central" style="width:100%;height:auto;" src="{{ url_for( 'static', filename='img/fon_title1.jpg')}}" alt="">
 </div>
 
 <!-- Page items -->
@@ -110,7 +109,7 @@
     <!-- About items -->
     <div id="about" class="container-about">
         <div style="padding-top:200px;" align="center">
-            <h1>ИСТОРИЯ</h1>
+            <h1 style="color: #fff">ИСТОРИЯ</h1>
             <p style="color: #fff">ПЛЕМЕННОГО КОННОГО ЗАВОДА "ЗАВИВАЛОВСКИЙ"</p>
             <img src="{{ url_for( 'static', filename='img/icons/readmore_1.png')}}" style="margin-top:30px;width:200px"
                  onmouseout="this.src='{{ url_for( 'static', filename='img/icons/readmore_1.png')}}'; this.width=200;"
@@ -128,29 +127,29 @@
             <div class="line-yellow"></div>
         </div>
         <div style="display:flex;margin:10px 0;" align="center">
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/>
+            <img id="1_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/>
+            <img id="2_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/>
+            <img id="3_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/>
         </div>
         <div style="display:flex;margin:10px 0;" align="center">
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/>
+            <img id="4_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/>
+            <img id="5_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/>
+            <img id="6_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/>
         </div>
         <div style="display:flex;margin:10px 0;" align="center">
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_8.png')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/>
+            <img id="7_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/>
+            <img id="8_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_8.png')}}"/>
+            <img id="9_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/>
         </div>
         <div style="display:flex;margin:10px 0;" align="center">
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_11.png')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_12.png')}}"/>
+            <img id="10_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}"/>
+            <img id="11_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_11.png')}}"/>
+            <img id="12_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_12.png')}}"/>
         </div>
         <div style="display:flex;margin:10px 0;" align="center">
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_14.png')}}"/>
-                <img class="image" src="{{ url_for( 'static', filename='img/gallery/HL_15.png')}}"/>
+            <img id="13_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}"/>
+            <img id="14_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_14.png')}}"/>
+            <img id="15_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_15.png')}}"/>
         </div>
     </div>
 
@@ -177,46 +176,68 @@
     <div class="popup_bg"></div>
     <div id="carousel-id" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-id" data-slide-to="1"></li>
-            <li data-target="#carousel-id" data-slide-to="2"></li>
-            <li data-target="#carousel-id" data-slide-to="3"></li>
-            <li data-target="#carousel-id" data-slide-to="4"></li>
-            <li data-target="#carousel-id" data-slide-to="5"></li>
-            <li data-target="#carousel-id" data-slide-to="6"></li>
-            <li data-target="#carousel-id" data-slide-to="7"></li>
-            <li data-target="#carousel-id" data-slide-to="8"></li>
-            <li data-target="#carousel-id" data-slide-to="9"></li>
-            <li data-target="#carousel-id" data-slide-to="10"></li>
-            <li data-target="#carousel-id" data-slide-to="11"></li>
-            <li data-target="#carousel-id" data-slide-to="12"></li>
-            <li data-target="#carousel-id" data-slide-to="13"></li>
-            <li data-target="#carousel-id" data-slide-to="14"></li>
+            <li id="1_slide" data-target="#carousel-id" data-slide-to="0"></li>
+            <li id="2_slide" data-target="#carousel-id" data-slide-to="1"></li>
+            <li id="3_slide" data-target="#carousel-id" data-slide-to="2"></li>
+            <li id="4_slide" data-target="#carousel-id" data-slide-to="3"></li>
+            <li id="5_slide" data-target="#carousel-id" data-slide-to="4"></li>
+            <li id="6_slide" data-target="#carousel-id" data-slide-to="5"></li>
+            <li id="7_slide" data-target="#carousel-id" data-slide-to="6"></li>
+            <li id="8_slide" data-target="#carousel-id" data-slide-to="7"></li>
+            <li id="9_slide" data-target="#carousel-id" data-slide-to="8"></li>
+            <li id="10_slide" data-target="#carousel-id" data-slide-to="9"></li>
+            <li id="11_slide" data-target="#carousel-id" data-slide-to="10"></li>
+            <li id="12_slide" data-target="#carousel-id" data-slide-to="11"></li>
+            <li id="13_slide" data-target="#carousel-id" data-slide-to="12"></li>
+            <li id="14_slide" data-target="#carousel-id" data-slide-to="13"></li>
+            <li id="15_slide" data-target="#carousel-id" data-slide-to="14"></li>
         </ol>
 
         <div class="carousel-inner" role="listbox">
-            <div class="item active" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_8.png')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_11.png')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_12.png')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_14.png')}}"/></div>
-            <div class="item" align="center"><img class="carousel_img" src="{{ url_for( 'static', filename='img/gallery/HL_15.png')}}"/></div>
+            <div id="1" class="item" align="center"><img class="carousel_img"
+                                                         src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/>
+            </div>
+            <div id="2" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/></div>
+            <div id="3" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/></div>
+            <div id="4" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/></div>
+            <div id="5" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_5.JPG')}}"/></div>
+            <div id="6" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_6.jpg')}}"/></div>
+            <div id="7" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/></div>
+            <div id="8" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_8.png')}}"/></div>
+            <div id="9" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/></div>
+            <div id="10" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}"/>
+            </div>
+            <div id="11" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_11.png')}}"/>
+            </div>
+            <div id="12" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_12.png')}}"/>
+            </div>
+            <div id="13" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}"/>
+            </div>
+            <div id="14" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_14.png')}}"/></div>
+            <div id="15" class="item" align="center"><img class="carousel_img"
+                                                  src="{{ url_for( 'static', filename='img/gallery/HL_15.png')}}"/></div>
         </div>
 
         <a class="left carousel-control" href="#carousel-id" role="button" data-slide="prev">
-            <img src="{{ url_for( 'static', filename='img/arrow_left.png')}}" style="margin:auto auto;margin-top:30vh;height:96px"/>
+            <img src="{{ url_for( 'static', filename='img/arrow_left.png')}}"
+                 style="margin:auto auto;margin-top:30vh;height:96px"/>
         </a>
         <a class="right carousel-control" href="#carousel-id" role="button" data-slide="next">
-            <img src="{{ url_for( 'static', filename='img/arrow_right.png')}}" style="margin:auto auto;margin-top:30vh;height:96px"/>
+            <img src="{{ url_for( 'static', filename='img/arrow_right.png')}}"
+                 style="margin:auto auto;margin-top:30vh;height:96px"/>
         </a>
     </div>
 </div>
@@ -254,26 +275,100 @@
             event.preventDefault();
         });
       });
-
-
-
-
-
 </script>
 <script>
     $(function(){
-        $(".image").click(function() {
+        $("#1_img").click(function() {
+            $("#1_slide").attr('class', 'active');
+            $("#1").attr('class', 'item active');
             $(".popup").css({"display":"block"})
         });
+        $("#2_img").click(function() {
+            $("#2_slide").attr('class', 'active');
+            $("#2").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#3_img").click(function() {
+            $("#3_slide").attr('class', 'active');
+            $("#3").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#4_img").click(function() {
+            $("#4_slide").attr('class', 'active');
+            $("#4").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#5_img").click(function() {
+            $("#5_slide").attr('class', 'active');
+            $("#5").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#6_img").click(function() {
+            $("#6_slide").attr('class', 'active');
+            $("#6").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#7_img").click(function() {
+            $("#7_slide").attr('class', 'active');
+            $("#7").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#8_img").click(function() {
+            $("#8_slide").attr('class', 'active');
+            $("#8").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#9_img").click(function() {
+            $("#9_slide").attr('class', 'active');
+            $("#9").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#10_img").click(function() {
+            $("#10_slide").attr('class', 'active');
+            $("#10").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#11_img").click(function() {
+            $("#11_slide").attr('class', 'active');
+            $("#11").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#12_img").click(function() {
+            $("#12_slide").attr('class', 'active');
+            $("#12").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#13_img").click(function() {
+            $("#13_slide").attr('class', 'active');
+            $("#13").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#14_img").click(function() {
+            $("#14_slide").attr('class', 'active');
+            $("#14").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+        $("#15_img").click(function() {
+            $("#15_slide").attr('class', 'active');
+            $("#15").attr('class', 'item active');
+            $(".popup").css({"display":"block"})
+        });
+     })
+</script>
+<script>
+    $(function(){
         $(".popup_bg").click(function() {
             $(".popup").css({"display":"none"})
         });
+        $("#menu_button").click(function() {
+            $(".popup_menu").css({"display":"block"})
+        });
+        $(".popup_bg_menu").click(function() {
+            $(".popup_menu").css({"display":"none"})
+        });
     });
-
-
-
 </script>
-<link rel="stylesheet" href="/static/css/style.css?ver=239" type="text/css"/>
+<link rel="stylesheet" href="/static/css/style.css?ver=252" type="text/css"/>
 <link rel="stylesheet" href="/static/css/bootstrap.min.css?ver=3" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
