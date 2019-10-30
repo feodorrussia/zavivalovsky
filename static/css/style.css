@@ -29,7 +29,8 @@ h1, h2, h3, h4{
 .container-about{
     height:100vh;
     background-image: url("../img/Hourses1.jpg");
-    background-size: 100% 100%;
+    background-position: center;
+    background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
 }
@@ -136,7 +137,7 @@ h1, h2, h3, h4{
 .popup_bg_menu {
 	background:rgba(0,0,0,0.7);
 	position:absolute;
-	z-index:1;
+	z-index:2;
 	height:100%;
 	width:100%;
 }
@@ -147,7 +148,7 @@ h1, h2, h3, h4{
 	position: absolute;
 	padding: 0 150px;
 	right:0;
-	z-index:2;
+	z-index:3;
 	height:100vh;
 	max-width:50%;
 }
@@ -155,6 +156,10 @@ h1, h2, h3, h4{
 .image{
     width:30vw;
     margin: 0 1vw;
+}
+
+.img_stallion{
+    margin: 0 auto;
 }
 /*--- Gallery styles ---*/
 
@@ -338,10 +343,9 @@ footer{
     margin: 40px 0;
     position: relative;
     width: 60%;
-    height: 80vh;
 }
 
-.fadein img { position:absolute; height:100%; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 16s; animation-iteration-count: infinite; }
+.fadein img { position:absolute; height:85vh; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 16s; animation-iteration-count: infinite; }
 .fadein img:nth-child(1) { animation-delay: 0s; }
 .fadein img:nth-child(2) { animation-delay: 4s; }
 .fadein img:nth-child(3) { animation-delay: 8s;}
