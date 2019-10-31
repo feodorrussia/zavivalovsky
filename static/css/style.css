@@ -5,13 +5,28 @@ body{
 
 h1{
     margin-top: 30px;
-	color: #fff;
 }
 
 h1, h2, h3, h4{
+	color: #fff;
 	font-family: 'Franklin Gothic Medium', sans-serif;
 }
 /* -------- Container's styles ---------  */
+.runners{
+    width:70%;
+    margin: 0 auto;
+}
+.runner{
+    display:flex;
+    margin: 0 auto;
+}
+.title{
+    height:50vh;
+    background-image:url("../img/fon_title1.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .header{
     background-color: #000;
     width:100%;
@@ -36,10 +51,12 @@ h1, h2, h3, h4{
 }
 
 .container-title{
-  background-color: #000;
-  width: 100%;
-  margin-top: 30px;
-  height: 90vh;
+    width: 100%;
+    height: 95vh;
+    background-image: url("../img/1.png");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container-social{
@@ -339,14 +356,30 @@ footer{
   100% { opacity: 0; }
 }
 
+.img {
+    margin: 40px 0;
+    position: relative;
+    width: 60%;
+    display: none;
+}
+
+.img img{
+    position:absolute;
+    height:85vh;
+    margin: 0 auto;
+    left:0;
+    right:0;
+    display: none;
+}
+
 .fadein {
     margin: 40px 0;
     position: relative;
     width: 60%;
 }
 
-.fadein img { position:absolute; height:85vh; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 16s; animation-iteration-count: infinite; }
+.fadein img { position:absolute; height:85vh; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 12s; animation-iteration-count: infinite; }
 .fadein img:nth-child(1) { animation-delay: 0s; }
-.fadein img:nth-child(2) { animation-delay: 4s; }
-.fadein img:nth-child(3) { animation-delay: 8s;}
-.fadein img:nth-child(4) { animation-delay: 12s;}
+.fadein img:nth-child(2) { animation-delay: 3s; }
+.fadein img:nth-child(3) { animation-delay: 6s;}
+.fadein img:nth-child(4) { animation-delay: 9s;}

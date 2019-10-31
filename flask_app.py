@@ -44,6 +44,10 @@ def sale():
 def news():
     return render_template('news.html')
 
+@app.route('/runners')
+def runners():
+    return render_template('runners.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

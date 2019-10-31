@@ -61,19 +61,6 @@
     </div>
 </div>
 
-<script>
-    $(function(){
-        $(".menu_button").click(function() {
-            $(".menu_button").css({"display":"none"})
-            $(".popup_menu").css({"display":"block"})
-        });
-        $(".popup_bg_menu").click(function() {
-            $(".popup_menu").css({"display":"none"})
-            $(".menu_button").css({"display":"block"})
-        });
-    });
-</script>
-
 <!-- Page items -->
 <div class="container-total" style="background: #404040;display: flex">
     <div style="padding-top:20px" align="center">
@@ -153,6 +140,19 @@
             event.preventDefault();
         });
       });
+</script>
+
+<script>
+    $(function(){
+        $(".menu_button").click(function() {
+            $(".menu_button").css({"display":"none"})
+            $(".popup_menu").css({"display":"block"})
+        });
+        $(".popup_bg_menu").click(function() {
+            $(".popup_menu").css({"display":"none"})
+            $(".menu_button").css({"display":"block"})
+        });
+    });
 </script>
 
 
