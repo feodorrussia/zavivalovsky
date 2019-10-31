@@ -52,7 +52,7 @@
     <div class="menu">
         <a style="color:#fff" href="\index"><h2 style="margin-top:100px;">ГЛАВНАЯ</h2></a>
         <div class="line-yellow"></div>
-        <a style="color:orange;" href="\index"><h2>ПРОДАЖА</h2></a>
+        <a style="color:orange;" href="\sale"><h2>ПРОДАЖА</h2></a>
         <div class="line-yellow"></div>
         <a style="color:#fff" href="\about"><h2>ИСТОРИЯ</h2></a>
         <div class="line-yellow"></div>
@@ -62,58 +62,29 @@
     </div>
 </div>
 
+<div class="title"></div>
+
 <!-- Page items -->
-<div class="container-total">
-    <div style="margin-top:80px;margin-bottom:30px;" align="center">
-        <h1>ПРОДАЖА</h1>
+<div class="container-total" align="center">
+    <div style="display:flex;width:100%;height:10vh">
+        <div style="background-color:#202020;width:19%" align="center"><a style="color:#fff" href="\stallions"><h3 style="margin-top:7px">ЖЕРЕБЦЫ-ПРОИЗВОДИТЕЛИ</h3></a></div>
+        <div style="background-color:#707070;width:22%" align="center"><a style="color:#fff" href="\heavy"><h3>РУССКИЕ ТЯЖЕЛОВОЗЫ</h3></a></div>
+        <div style="background-color:#202020;width:19%" align="center"><a style="color:#fff" href="\runners"><h3>БЕГОВЫЕ ЛОШАДИ</h3></a></div>
+        <div style="background-color:#707070;width:22%" align="center"><a style="color:#fff" href="\foals"><h3>ЖЕРЕБЯТА 2018г.р.</h3></a></div>
+        <div style="background-color:#202020;width:19%" align="center"><a style="color:#fff" href="\mares"><h3>КОБЫЛЫ</h3></a></div>
     </div>
-    <!-- Начало -->
-    <div style="background: #202020;display: flex">
-        <div align="center">
-            <img style="height: 50vh;padding: 20px 50px;"
-                 src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" alt="">
-        </div>
-        <div style="background: #000;margin-top: auto;margin-bottom: auto;margin-left: 20px;margin-right: 10px;">
-            <p style="color: #fff;font-weight:800; padding: 10px 10px;" align="center">Попкорн</p>
-        </div>
-        <div style="background: #000;margin-top: auto;margin-bottom: auto;margin-left: 20px;margin-right: 10px;">
-            <p style="color: #fff;font-weight:800; padding: 10px 10px;" align="center">Порода: Орловская рысистая, жеребец</p>
-        </div>
-        <div style="background: #000;margin-top: auto;margin-bottom: auto;margin-left: 20px;margin-right: 10px;">
-            <p style="color: #fff;font-weight:800; padding: 10px 10px;" align="center">Цена: 100 000 р.</p>
-        </div>
-    </div>
-    <!-- Начало -->
-    <div style="background: #000;display: flex">
-        <div style="background: #202020;width:50%;height:40vh;margin-top: auto;margin-bottom: auto;margin-left: 20px;">
-            <h1 style="color: #ffc000;" align="center">Корм</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
-        <div align="center">
-            <img style="height: 50vh;padding: 20px 50px;"
-                 src="{{ url_for( 'static', filename='img/gallery/HL_14.png')}}" alt="">
-        </div>
-    </div>
-    <!-- Начало -->
-    <div style="background: #202020;display: flex">
-        <div align="center">
-            <img style="height: 50vh;padding: 20px 50px;"
-                 src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}" alt="">
-        </div>
-        <div style="background: #000;width:50%;height:40vh;margin-top: auto;margin-bottom: auto;">
-            <h1 style="color: #ffc000;" align="center">Тренинг</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
+
+    <div style="width:70%;height:60vh">
+        <h4 style="color:#fff">Пара слов о Лошадях Завиваловской селекции</h4>
     </div>
 </div>
 <!-- Social link -->
 <div id="social" class="container-social" align="center">
     <div class="line"></div>
     <div class="icon" align="center">
-        <img src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}" style="width:96px"
-             onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}'; this.width=96;"
-             onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}'; this.width=96;"
-             onclick="location.href='https://www.instagram.com/zavivalovesky/'"/>
+        <a href='https://www.instagram.com/zavivalovesky/'><img src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}" style="width:96px"
+             onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}'; this.width=96;this.height=96;"
+             onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}'; this.width=96; this.height=96;"/></a>
     </div>
     <div class="line"></div>
 </div>
@@ -121,12 +92,12 @@
 <!-- Footer items  -->
 <footer>
     <div id="contacts" align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
-        <h1 style="margin: 0 0; padding-top: 30px;">"ЗАВИВАЛОВСКИЙ"</h1>
+        <h1 style="color: #fff;margin: 0 0; padding-top: 30px;">"ЗАВИВАЛОВСКИЙ"</h1>
         <div class="line-yellow"></div>
         <h2 style="color: #fff">ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h2>
         <p style="color: #fff;font-weight:500;padding-top: 20px;">РОССИЯ</p>
-        <p style="color: #fff;font-weight:300">Пензенская область, Каменский район</p>
-        <p style="color: #fff;font-weight:300">село Завиваловка, улица Совхозная 10</p>
+        <p style="color: #fff;font-weight:300">ПЕНЗЕНСКАЯ ОБЛАСТЬ, КАМЕНСКИЙ РАЙОН</p>
+        <p style="color: #fff;font-weight:300">СЕЛО ЗАВИВАЛОВКА, УЛИЦА СОВХОЗНАЯ 10</p>
         <p style="color: #fff;font-weight:400;padding-top: 10px;">Email zavivalovesky@mail.ru</p>
         <p style="color: #fff;font-weight:400;padding-top: 10px;">Телефон +7 *** ***-**-**</p>
     </div>
