@@ -60,9 +60,9 @@
 <div class="popup_menu">
     <div class="popup_bg_menu"></div>
     <div class="menu">
-        <a style="color:orange;" href="\index"><h2 style="margin-top:100px;">ГЛАВНАЯ</h2></a>
+        <a style="color:#fff;" href="\index"><h2 style="margin-top:100px;">ГЛАВНАЯ</h2></a>
         <div class="line-yellow"></div>
-        <a style="color:#fff;" href="\sale"><h2>ПРОДАЖА</h2></a>
+        <a style="color:#fff;" href="\sale"><h2>НАШИ ЛОШАДИ</h2></a>
         <div class="line-yellow"></div>
         <a style="color:#fff" href="\about"><h2>ИСТОРИЯ</h2></a>
         <div class="line-yellow"></div>
@@ -82,7 +82,7 @@
 <div class="runners">
     <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
 
-    <div class="runner">
+    <div class="runner" onclick="this.href='\popcorn'">
         <img src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" style="height:40vh;width:auto;"/>
         <div>
             <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Попкорн</h1>
@@ -95,26 +95,39 @@
 
     <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
 
-    <div class="runner">
-        <img src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" style="height:40vh;width:auto;"/>
+    <div class="runner" onclick="this.href='\kreker'">
+        <img src="{{ url_for( 'static', filename='img/stallions/kreker1.png')}}" style="height:40vh;width:auto;"/>
         <div>
-            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Попкорн</h1>
+            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Крекер</h1>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родился 1 января 2018 года</p>
-            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Пеон 19, Паутинка</p>
+            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Кальмиус, Коррида</p>
         </div>
         <h2 style="color: #fff;margin: auto 50px">100 000</h2>
     </div>
 
     <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
 
-    <div class="runner">
-        <img src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" style="height:40vh;width:auto;"/>
+    <div class="runner" onclick="this.href='\dakar'">
+        <img src="{{ url_for( 'static', filename='img/stallions/dakar1.png')}}" style="height:40vh;width:auto;"/>
         <div>
-            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Попкорн</h1>
+            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Дакар</h1>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
-            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родился 1 января 2018 года</p>
-            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Пеон 19, Паутинка</p>
+            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родился 12 мая 2018 года</p>
+            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Кальмиус, Динамика</p>
+        </div>
+        <h2 style="color: #fff;margin: auto 50px">100 000</h2>
+    </div>
+
+    <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
+
+    <div class="runner" onclick="this.href='\uprek'">
+        <img src="{{ url_for( 'static', filename='img/stallions/3.jpg')}}" style="height:40vh;width:auto;"/>
+        <div>
+            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Упрёк</h1>
+            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
+            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родился в 2018 году</p>
+            <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Пеон 19, Убойная</p>
         </div>
         <h2 style="color: #fff;margin: auto 50px">100 000</h2>
     </div>
