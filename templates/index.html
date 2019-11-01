@@ -107,23 +107,23 @@
                  onclick="location.href='\kreker'">
         </div>
 
-        <div style="width: 29%;padding:10px 0;margin-top:40px">
-            <h1 align="center" style="color:#ffc000;margin-bottom:40px;font-weight:150">ПРОДАЖА</h1>
-            <div style="display: inline-block; width: 19%;padding:10px;margin-left:20px" align="center">
+        <div id="stlions_link" align="center">
+            <h1 style="color:#ffc000;margin-bottom:55px;font-size:40px">ПРОДАЖА</h1>
+            <div  id="stlions_link_block">
                 <a class="link_stlion1" href="\popcorn" style="color:#fff;"><h2 align="left"
-                                                                                style="font-weight:75;margin-bottom:30px;">
+                                                                                style="font-size:35px;">
                     ПОПКОРН</h2>
                 </a>
                 <a class="link_stlion2" href="\dakar" style="color:#fff;"><h2 align="left"
-                                                                              style="font-weight:75;margin-bottom:30px;">
+                                                                              style="font-size:35px;">
                     ДАКАР</h2></a>
                 <a class="link_stlion3" href="\uprek" style="color:#fff;"><h2 align="left"
-                                                                              style="font-weight:75;margin-bottom:30px;">
+                                                                              style="font-size:35px;">
                     УПРЁК</h2></a>
                 <a class="link_stlion4" href="\kreker" style="color:#fff;"><h2 align="left"
-                                                                               style="font-weight:75;margin-bottom:30px;">
+                                                                               style="font-size:35px;">
                     КРЕКЕР</h2></a>
-                <a href="\sale" style="color:#fff;"><h2 align="left" style="font-weight:75;margin-bottom:30px;">
+                <a href="\sale" style="color:#fff;"><h2 align="left" style="font-size:35px;">
                     Другие</h2></a>
             </div>
         </div>
@@ -131,7 +131,7 @@
 
     <!-- About items -->
     <div id="about" class="container-about">
-        <div style="padding-top:35vh;" align="center">
+        <div class="middle" align="center">
             <h1 style="color: #fff">ИСТОРИЯ</h1>
             <p style="color: #fff">ПЛЕМЕННОГО КОННОГО ЗАВОДА "ЗАВИВАЛОВСКИЙ"</p>
             <img src="{{ url_for( 'static', filename='img/icons/readmore_1.png')}}"
@@ -150,17 +150,17 @@
                 Галерея</h1>
             <div class="line-yellow"></div>
         </div>
-        <div style="display:flex;margin:10px 0;" align="center">
+        <div style="display:flex;margin:10px 0;width:30vh" align="center">
             <img id="1_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_1.JPG')}}"/>
             <img id="2_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_2.JPG')}}"/>
             <img id="3_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_3.jpg')}}"/>
         </div>
-        <div style="display:flex;margin:10px 0;" align="center">
+        <div style="display:flex;margin:10px 0;width:30vh" align="center">
             <img id="4_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_4.jpg')}}"/>
             <img id="12_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_12.png')}}"/>
             <img id="13_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}"/>
         </div>
-        <div style="display:flex;margin:10px 0;" align="center">
+        <div style="display:flex;margin:10px 0;width:30vh" align="center">
             <img id="7_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_7.JPG')}}"/>
             <img id="14_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_14.png')}}"/>
             <img id="9_img" class="image" src="{{ url_for( 'static', filename='img/gallery/HL_9.png')}}"/>
@@ -423,7 +423,7 @@
 
 
 </script>
-<link rel="stylesheet" href="/static/css/style.css?ver=266" type="text/css"/>
+<link rel="stylesheet" href="/static/css/style.css?ver=271" type="text/css"/>
 <link rel="stylesheet" href="/static/css/bootstrap.min.css?ver=3" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
