@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +60,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
               <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/img/oval.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -888,15 +891,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/oval.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/oval.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
