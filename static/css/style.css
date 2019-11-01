@@ -124,6 +124,11 @@ margin: 16px 0 0 -16px;}
 	margin-bottom: 10px;
 }
 
+.icon_img{
+    width:96px;
+    height:96px;
+}
+
 .icon{
     display: inline-block;
     padding: 30px 20px;
@@ -197,7 +202,7 @@ margin: 16px 0 0 -16px;}
     background-color: #000;
     display:block;
 	position: absolute;
-	padding: 0 150px;
+	padding: 0 10vw;
 	right:0;
 	z-index:3;
 	height:100vh;
@@ -212,79 +217,7 @@ margin: 16px 0 0 -16px;}
 }
 
 .img_stallion{
-    margin: 0 auto;
-}
-/*--- Gallery styles ---*/
-
-.gallery {
-    margin-top:20px;
-    margin-left:50px;
-    margin-right:50px;
-    padding-bottom:50px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 10px;
-}
-.gallery__img {
- width: 100%;
- height: 100%;
- object-fit: cover;
-}
-.gallery__item {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end:0
-}
-.gallery__item--1 {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 6;
-}
-.gallery__item--2 {
-    grid-column-start: 6;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 4;
-}
-.gallery__item--4 {
-    grid-column-start: 6;
-    grid-column-end: 9;
-    grid-row-start: 4;
-    grid-row-end: 7;
-}
-.gallery__item--6 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 9;
-}
-.gallery__item--5 {
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row-start: 6;
-    grid-row-end: 8;
-}
-.gallery__item--7 {
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row-start: 8;
-    grid-row-end: 10;
-}
-.gallery__item--3 {
-    grid-column-start: 6;
-    grid-column-end: 9;
-    grid-row-start: 7;
-    grid-row-end: 10;
-}
-
-/* -------- Top navbar styles ---------  */
-
-.navbar .brand{
-	margin-top:10px;
-	margin-left:5px;
-}
+    margin: 0 auto;}
 
 /* -------- Page styles ---------  */
 
@@ -317,6 +250,10 @@ footer{
 	color: #999999;
 }
 
+.footer h1{
+    color: #fff;margin: 0 0; padding-top: 30px;font-size:75px
+}
+
 #social li a.instagram-icon{ /*rework*/
 	background-image: url(../img/icons/icon-instagram_1.png);
 	background-repeat: no-repeat;
@@ -333,54 +270,44 @@ footer{
  /* RESPONSIVE CSS
     -------------------------------------------------- */
 
-    @media (max-width: 979px) {
-      .container.navbar-wrapper {
-        margin-bottom: 0;
-        width: auto;
-      }
-      .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
-		padding-top: 15px;
-	}
-      .navbar-inner {
-        border-radius: 0;
-        margin: -20px 0;
-      }
-      footer {
-      	margin-left: -20px;
-		margin-right: -20px;
-      }
-      footer .container{
-      	margin-left: 10px;
-		margin-right: 10px;
-      }
-    }
+    @media (max-width: 979px) {}
 
 
-    @media (max-width: 767px) {
+    @media (max-width: 770px) {
         #social li a{
 	        height: 64px;
 	        width: 64px;
         }
-        .fadein {
-            height: 80vw;
+        .fadein img{
+            width:50vh;
+            height: auto;
         }
-        .container-about{
-            height:80vw;
+        .img img{
+            width:50vh;
+            height: auto;
         }
-    	.navbar .brand{
-			font-family: 'Merienda', cursive;
-			font-size: 24px; 
-		}
     }
 
-    @media (max-width: 480px) {
-
-      .inline li{
-      	padding-bottom: 10px;
-      }
-      .form-inline button{
-      	margin-top: 10px;
-      }
+    @media (max-width: 500px) {
+        .fadein{
+            display:none;
+        }
+        .container-title{
+            height:50vh;
+        }
+        .container-about{
+            height:50vh;
+        }
+        .icon{
+            padding: 0 0;
+        }
+        .icon_img{
+            width:64px;
+            height:64px;
+        }
+        .footer h1{
+            font-size:40px;
+        }
     }
 
 /*--- Приложение к лошадям ---*/
