@@ -27,6 +27,12 @@ bottom:0;
 background: #000;
 z-index: 30;}
 
+.contpre{
+width: 250px;
+height: 100px;
+margin: 50wh auto;
+color:#fff;}
+
 #p_prldr .svg_anm {
 position: absolute;
 width: 41px;
