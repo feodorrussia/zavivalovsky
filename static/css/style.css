@@ -9,7 +9,11 @@ h1{
 
 h1, h2, h3, h4{
 	color: #fff;
-	font-family: 'Franklin Gothic Medium', sans-serif;
+	font-family: 'Nobel', sans-serif;
+}
+
+p{
+    font-family: 'Nobel', sans-serif;
 }
 /* -------- Container's styles ---------  */
 .runners{
