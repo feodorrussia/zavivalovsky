@@ -175,6 +175,7 @@ h1, h2, h3, h4{
 
 .image{
     width:30vw;
+    height: auto;
     margin: 0 1vw;
     cursor:pointer;
 }
