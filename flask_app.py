@@ -11,9 +11,11 @@ app.secret_key = 'any random string'
 def index():
     return render_template('index.html')
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 @app.route('/popcorn')
 def popcorn():
@@ -24,29 +26,45 @@ def popcorn():
 def uprek():
     return render_template('uprek.html')
 
+
 @app.route('/prelat')
 def prelat():
     return render_template('prelat.html')
+
 
 @app.route('/dakar')
 def dakar():
     return render_template('dakar.html')
 
+
 @app.route('/kreker')
 def kreker():
     return render_template('kreker.html')
+
 
 @app.route('/sale')
 def sale():
     return render_template('sale.html')
 
+
 @app.route('/news')
 def news():
     return render_template('news.html')
 
+
 @app.route('/runners')
 def runners():
     return render_template('runners.html')
+
+
+@app.route('/heavy')
+def heavy():
+    return render_template('heavy.html')
+
+
+@app.route('/heavy_ex')
+def heavy_ex():
+    return render_template('heavy_ex.html')
 
 
 if __name__ == '__main__':

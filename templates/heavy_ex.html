@@ -1,0 +1,22 @@
+{% extends "stallions_ex.html" %}
+
+{% block title %}
+<title>Русский тяжеловоз</title>
+{% endblock %}
+
+{% block content %}
+<div style="padding-top:20px" align="center">
+    <img style="height: 80vh;padding: 40px 50px;" src="{{ url_for( 'static', filename='img/stallions/heavy.JPG')}}"
+         alt="">
+</div>
+<div style="background: #000;width:45%;height:60vh;margin-left: 50px;margin-top:15vh">
+    <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;">Кличка</h1>
+    <p style="color: #fff;font-weight:500;padding-left: 7vw;">Порода</p>
+    <p style="color: #fff;font-weight:500;padding-left: 7vw;">Дата рождения</p>
+    <p style="color: #fff;font-weight:500;padding-left: 7vw;">Родители</p>
+    <p style="color: #fff;font-weight:500;padding-left: 7vw;">Промеры</p>
+    <p style="color: #fff;font-weight:500;padding-left: 7vw;">Характеристика</p>
+    <p style="color: #fff;font-weight:500;padding-left: 7vw;">Заслуги</p>
+    <p style="color: #fff;font-weight:600;padding-left: 7vw;">Цена</p>
+</div>
+{% endblock %}
