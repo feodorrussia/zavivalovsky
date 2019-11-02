@@ -300,7 +300,7 @@ footer{
 
     @media (max-width: 655px) {
         .fadein{
-            display:none;
+            display:none !important;
         }
         #stlions_link{
             width:100%;

@@ -373,50 +373,59 @@
     $(function(){
         $(".link_stlion1").hover(
             function(){
-                $(".img").css({"display":"block"});
-                $(".img_stlion1").css({"display":"block"});
-                $(".fadein").css({"display":"none"});
+                if ($(".fadein").css("display")!="none")
+                    $(".img").css({"display":"block"});
+                    $(".img_stlion1").css({"display":"block"});
+                    $(".fadein").css({"display":"none"});
             },
             function(){
-                $(".img").css({"display":"none"});
-                $(".img_stlion1").css({"display":"none"});
-                $(".fadein").css({"display":"block"});
+                if ($(".img").css("display")!="none")
+                    $(".img").css({"display":"none"});
+                    $(".img_stlion1").css({"display":"none"});
+                    $(".fadein").css({"display":"block"});
+
             }
         );
         $(".link_stlion2").hover(
             function(){
-                $(".img").css({"display":"block"});
-                $(".img_stlion2").css({"display":"block"});
-                $(".fadein").css({"display":"none"});
+                if ($(".fadein").css("display")!="none")
+                    $(".img").css({"display":"block"});
+                    $(".img_stlion2").css({"display":"block"});
+                    $(".fadein").css({"display":"none"});
             },
             function(){
-                $(".img").css({"display":"none"});
-                $(".img_stlion2").css({"display":"none"});
-                $(".fadein").css({"display":"block"});
+                if ($(".img").css("display")!="none")
+                    $(".img").css({"display":"none"});
+                    $(".img_stlion2").css({"display":"none"});
+                    $(".fadein").css({"display":"block"});
             }
         );
         $(".link_stlion3").hover(
             function(){
-                $(".img").css({"display":"block"});
-                $(".img_stlion3").css({"display":"block"});
-                $(".fadein").css({"display":"none"});
+                if ($(".fadein").css("display")!="none")
+                    $(".img").css({"display":"block"});
+                    $(".img_stlion3").css({"display":"block"});
+                    $(".fadein").css({"display":"none"});
             },
             function(){
-                $(".img").css({"display":"none"});
-                $(".img_stlion3").css({"display":"none"});
-                $(".fadein").css({"display":"block"});
+                if ($(".img").css("display")!="none")
+                    $(".img").css({"display":"none"});
+                    $(".img_stlion3").css({"display":"none"});
+                    $(".fadein").css({"display":"block"});
             }
         );
         $(".link_stlion4").hover(
             function(){
-                $(".img").css({"display":"block"});
-                $(".img_stlion4").css({"display":"block"});
-                $(".fadein").css({"display":"none"});
+                if ($(".fadein").css("display")!="none")
+                    $(".img").css({"display":"block"});
+                    $(".img_stlion4").css({"display":"block"});
+                    $(".fadein").css({"display":"none"});
             },
             function(){
-                $(".img").css({"display":"none"});
-                $(".img_stlion4").css({"display":"none"});
-                $(".fadein").css({"display":"block"});
+                if ($(".img").css("display")!="none")
+                    $(".img").css({"display":"none"});
+                    $(".img_stlion4").css({"display":"none"});
+                    $(".fadein").css({"display":"block"});
             }
         );
      })
