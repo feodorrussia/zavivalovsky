@@ -65,20 +65,20 @@
     {% block content %}{% endblock %}
 </div>
 <!-- Contacts -->
-<div id="contacts" align="center">
-    <div style="display:inline-block;padding:30px 30px;width: 20%;">
+<div id="contacts" class="stlion_cont" style="display:flex" align="center">
+    <div style="padding:30px 30px;width: 20%;">
         <img style="width: 100%;" src="{{ url_for( 'static', filename='img/staff/trainer.jpg')}}" alt="">
         <p style="color: #fff;font-weight: 500">Директор ПКЗ "Завиваловский"</p>
         <p style="color: #fff;font-weight: 300">И.И.Петров</p>
         <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
     </div>
-    <div style="display:inline-block;padding:10px 30px;width: 20%;">
+    <div style="padding:10px 30px;width: 20%;">
         <img style="width: 100%;" src="{{ url_for( 'static', filename='img/staff/trainer.jpg')}}" alt="">
         <p style="color: #fff;font-weight: 500">Тренер</p>
         <p style="color: #fff;font-weight: 300">И.О.Ф</p>
         <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
     </div>
-    <div style="display:inline-block;padding:10px 30px;width: 20%;">
+    <div style="padding:10px 30px;width: 20%;">
         <img style="width: 100%;" src="{{ url_for( 'static', filename='img/staff/trainer.jpg')}}" alt="">
         <p style="color: #fff;font-weight: 500">Тренер</p>
         <p style="color: #fff;font-weight: 300">И.О.Ф</p>
@@ -100,9 +100,7 @@
 <!-- Footer items  -->
 <footer>
     <div align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
-        <h1 style="color: #fff;margin: 0 0; padding-top: 30px;font-size:75px">ЗАВИВАЛОВСКИЙ</h1>
-        <div class="line-yellow" style="width:650px"></div>
-        <h2 style="color: #fff">ПЛЕМЕННОЙ КОННЫЙ ЗАВОД</h2>
+        <img src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" style="width:70vw">
         <p style="color: #fff;font-weight:500;padding-top: 20px;">РОССИЯ</p>
         <p style="color: #fff;font-weight:300">Пензенская область, Каменский район</p>
         <p style="color: #fff;font-weight:300">село Завиваловка, Улица Совхозная 10</p>
