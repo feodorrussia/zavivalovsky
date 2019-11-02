@@ -68,14 +68,24 @@
         <h1>НОВОСТИ</h1>
     </div>
     <!-- Начало -->
-    <div style="background: #202020;display: flex">
+    <div class="news_body" style="background: #202020;">
         <div align="center">
-            <img style="height: 50vh;padding: 20px 50px;"
+            <img style="width:50vw;padding: 20px 50px;"
                  src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}" alt="">
         </div>
-        <div style="background: #000;width:50%;height:40vh;margin-top: auto;margin-bottom: auto;">
+        <div style="background: #000;width: -webkit-fill-available;height:40vh;margin: auto 20px;">
             <h1 style="color: #ffc000;" align="center">Заголовок</h1>
-            <p style="color: #fff;font-weight:500" align="center">Текст</p>
+            <p style="color: #fff;font-size:16px" align="center">Текст</p>
+        </div>
+    </div>
+    <div class="news_body" style="background: #000;">
+        <div align="center">
+            <img style="width:50vw;padding: 20px 50px;"
+                 src="{{ url_for( 'static', filename='img/landscapes/3.1.png')}}" alt="">
+        </div>
+        <div style="background: #202020;width: -webkit-fill-available;height:40vh;margin: auto 20px;">
+            <h1 style="color: #ffc000;" align="center">Заголовок</h1>
+            <p style="color: #fff;font-size:16px" align="center">Текст</p>
         </div>
     </div>
 </div>

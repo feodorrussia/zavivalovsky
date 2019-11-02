@@ -154,6 +154,11 @@ margin: 16px 0 0 -16px;
     background-repeat: none;
     margin-top:-30px;
 }
+
+.news_body{
+    display: flex;
+}
+
 .popup {
 	position: fixed;
 	height:100%;
@@ -299,6 +304,9 @@ footer{
     -------------------------------------------------- */
 
     @media (max-width: 979px) {
+        .news_body{
+            display: block;
+        }
         .title_horse{
             margin-top:60px !important;
         }
