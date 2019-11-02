@@ -14,6 +14,7 @@ h1, h2, h3, h4{
 
 p{
     font-family: 'Nobel', sans-serif;
+    font-size:14px;
 }
 
 /* loader styles*/
@@ -266,6 +267,9 @@ margin: 16px 0 0 -16px;
   margin-right: auto;
   margin-top: 10px;
 }
+.title_horse{
+    height:auto;padding:30px 0;background-color: #101010;width: 100%;
+}
 
 /* -------- Footer styles ---------  */
 
@@ -295,44 +299,49 @@ footer{
     -------------------------------------------------- */
 
     @media (max-width: 979px) {
-        .horses_link{
-            display:block;
+        .title_horse{
+            margin-top:60px !important;
         }
-        .block_2{
-            margin-top:5px;
+        .fadein img{
+            height:50vh !important;
+            width: auto !important;
         }
-        .horses_link_1{
-            background-color:#202020;width:33vw;
+        .img img{
+            height:50vh !important;
+            width: auto !important;
         }
-
-        .horses_link_2{
-            background-color:#707070;width:33vw;
+        #stallions{
+            height:auto !important;
         }
     }
 
 
     @media (max-width: 770px) {
+        .runner{
+            text-align:center;
+            display:block;
+        }
         #social li a{
 	        height: 64px;
 	        width: 64px;
         }
         .fadein img{
-            width:50vh;
-            height: auto;
+            width:35vh !important;
+            height: auto !important;
         }
         .img img{
-            width:50vh;
-            height: auto;
+            width:35vh !important;
+            height: auto !important;
+        }
+        #stallions{
+            height:auto !important;
+        }
+        .image{
+            width:28vw;
         }
     }
 
     @media (max-width: 655px) {
-        .fadein{
-            display:none !important;
-        }
-        #stlions_link{
-            width:100%;
-        }
     }
 
     @media (max-width: 500px) {

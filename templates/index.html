@@ -16,6 +16,7 @@
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
 
+
     </style>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript">$(window).on('load', function () {
@@ -24,6 +25,7 @@
         $svg_anm.fadeOut();
         $preloader.delay(500).fadeOut('slow');
     });
+
     </script>
     <link href="{{ url_for( 'static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
 </head>
@@ -89,23 +91,14 @@
         </div>
 
         <div id="stlions_link" align="center">
-            <h1 style="color:#ffc000;margin-bottom:55px;font-size:40px">ПРОДАЖА</h1>
-            <div  id="stlions_link_block">
-                <a class="link_stlion1" href="\popcorn" style="color:#fff;"><h2 align="left"
-                                                                                style="font-size:35px;">
-                    ПОПКОРН</h2>
+            <h1 style="color:#ffc000;margin-bottom:55px;font-size:5vw">ПРОДАЖА</h1>
+            <div id="stlions_link_block">
+                <a class="link_stlion1" href="\popcorn" style="color:#fff;"><h1 align="left">ПОПКОРН</h1>
                 </a>
-                <a class="link_stlion2" href="\dakar" style="color:#fff;"><h2 align="left"
-                                                                              style="font-size:35px;">
-                    ДАКАР</h2></a>
-                <a class="link_stlion3" href="\uprek" style="color:#fff;"><h2 align="left"
-                                                                              style="font-size:35px;">
-                    УПРЁК</h2></a>
-                <a class="link_stlion4" href="\kreker" style="color:#fff;"><h2 align="left"
-                                                                               style="font-size:35px;">
-                    КРЕКЕР</h2></a>
-                <a href="\sale" style="color:#fff;"><h2 align="left" style="font-size:35px;">
-                    Другие</h2></a>
+                <a class="link_stlion2" href="\dakar" style="color:#fff;"><h1 align="left">ДАКАР</h1></a>
+                <a class="link_stlion3" href="\uprek" style="color:#fff;"><h1 align="left">УПРЁК</h1></a>
+                <a class="link_stlion4" href="\kreker" style="color:#fff;"><h1 align="left">КРЕКЕР</h1></a>
+                <a href="\sale" style="color:#fff;"><h1 align="left">Другие</h1></a>
             </div>
         </div>
     </div>
@@ -127,7 +120,7 @@
     <div id="gallery" style="width: 100%; background-color: #303030;padding-bottom:20px">
         <div align="center">
             <div class="line-yellow"></div>
-            <h1 style="display: inline-block;margin: 0 20px; padding-top: 60px;padding-bottom: 20px;color:#ffc000;">
+            <h1 style="display: inline-block;margin: 0 20px; padding-top: 60px;padding-bottom: 20px;color:#ffc000;font-size:3vw">
                 Галерея</h1>
             <div class="line-yellow"></div>
         </div>
@@ -150,7 +143,8 @@
 
     <!-- News block -->
     <div class="news" align="center" onclick="location.href='/news'" style="cursor:pointer">
-        <h1 style="color:#ffc000;padding-top:20vh;margin-bottom:30px">ЖИЗНЬ ЛЮДЕЙ И ЛОШАДЕЙ ПКЗ "ЗАВИВАЛОВСКИЙ"</h1>
+        <h1 style="color:#ffc000;padding-top:20vh;margin-bottom:30px;font-size:3vw">ЖИЗНЬ ЛЮДЕЙ И ЛОШАДЕЙ ПКЗ
+            "ЗАВИВАЛОВСКИЙ"</h1>
         <div class="line-yellow"></div>
         <p style="color: #fff;margin-top:20px">Пара слов о Завиваловском</p>
     </div>
@@ -224,9 +218,9 @@
     <div class="line"></div>
     <div class="icon" align="center">
         <a href='https://www.instagram.com/zavivalovesky/'><img class="icon_img"
-                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
-                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
-                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
+                                                                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
+                                                                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
+                                                                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
     </div>
     <div class="line"></div>
 </div>
@@ -235,11 +229,11 @@
 <footer>
     <div id="contacts" align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
         <img src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" style="width:70vw">
-        <p style="color: #fff;font-weight:500;padding-top: 20px;">РОССИЯ</p>
-        <p style="color: #fff;font-weight:300">Пензенская область, Каменский район</p>
-        <p style="color: #fff;font-weight:300">село Завиваловка, Улица Совхозная 10</p>
-        <p style="color: #fff;font-weight:400;padding-top: 10px;">Email zavivalovesky@mail.ru</p>
-        <p style="color: #fff;font-weight:400;padding-top: 10px;">Телефон +7 *** ***-**-**</p>
+        <p style="color: #fff;font-size:20px;padding-top: 20px;">РОССИЯ</p>
+        <p style="color: #fff;font-size:14px">Пензенская область, Каменский район</p>
+        <p style="color: #fff;font-size:14px">село Завиваловка, Улица Совхозная 10</p>
+        <p style="color: #fff;font-size:16px;padding-top: 10px;">Email zavivalovesky@mail.ru</p>
+        <p style="color: #fff;font-size:16px;padding-top: 10px;">Телефон +7 *** ***-**-**</p>
     </div>
     <div style="width: 100%;height: 100px;background-color: #404040"></div>
 
@@ -262,6 +256,7 @@
             event.preventDefault();
         });
       });
+
 
 
 </script>
@@ -335,6 +330,7 @@
     })
 
 
+
 </script>
 <script>
     $(function(){
@@ -347,6 +343,7 @@
             $(".menu_button").css({"display":"block"})
         });
     });
+
 
 
 </script>
@@ -410,6 +407,7 @@
             }
         );
      })
+
 
 
 </script>
