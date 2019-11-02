@@ -344,9 +344,6 @@ footer{
         #stallions{
             height:auto !important;
         }
-        .image{
-            width:28vw;
-        }
     }
 
     @media (max-width: 655px) {
