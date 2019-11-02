@@ -168,8 +168,16 @@ margin: 16px 0 0 -16px;
     margin-top:-30px;
 }
 
+.news_image{
+    width:50vw;
+    padding: 20px 50px;
+}
+
 .news_body{
+    background: #202020;
     display: flex;
+    margin-bottom:10px;
+    padding-bottom:10px;
 }
 
 .popup {
@@ -346,6 +354,9 @@ footer{
         }
         .news_body{
             display: block;
+        }
+        .news_image{
+            width:100vw;
         }
         .title_horse{
             margin-top:60px !important;
