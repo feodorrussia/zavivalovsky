@@ -34,7 +34,9 @@ margin: 150px auto 0 auto;
 color:#fff;}
 
 #p_prldr .svg_anm {
-position:fixed;
+position:absolute;
+top:51vh;
+left:49vw;
 width: 41px;
 height: 41px;
 background: url(../img/oval.svg) center center no-repeat;
@@ -322,6 +324,7 @@ footer{
             width:50vh;
             height: auto;
         }
+    }
 
     @media (max-width: 655px) {
         .fadein{
@@ -363,7 +366,7 @@ footer{
   100% { opacity: 0; }
 }
 
-.img {
+.img{
     margin: 40px 0;
     position: relative;
     width: 60%;
@@ -379,7 +382,7 @@ footer{
     display: none;
 }
 
-.fadein {
+.fadein{
     margin: 40px 0;
     position: relative;
     width: 60%;
