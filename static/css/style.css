@@ -46,6 +46,19 @@ margin: 16px 0 0 -16px;
 }
 
 /* -------- Container's styles ---------  */
+.container-total_stlion{
+    background: #404040;
+    width:100%;
+    display: flex;
+}
+.stlion_cont{
+    display:flex;
+    width: max-content;
+    margin: 0 auto;
+}
+.person{
+    padding:30px;width: 20vw;
+}
 .runners{
     width:70%;
     margin: 0 auto;
@@ -249,6 +262,17 @@ margin: 16px 0 0 -16px;
     background-color:#707070;width:22vw;height:65px;
 }
 
+.horse_descr{
+    background: #000;
+    width:45%;
+    height:60vh;
+    margin: 15vh 20px 0 50px;
+}
+
+.horse_photo{
+    height: 80vh;
+    padding: 40px 0 40px 10vw;
+}
 /* -------- Page styles ---------  */
 
 #heading{
@@ -304,6 +328,22 @@ footer{
     -------------------------------------------------- */
 
     @media (max-width: 979px) {
+        .container-total_stlion{
+            display: block !important;
+            padding-bottom: 20px;
+        }
+        .horse_descr{
+            width: 70vw !important;
+            margin:auto;
+            height:max-content;
+        }
+
+        .horse_photo{
+            margin-top:50px;
+            padding: 0 !important;
+            width: 40vw !important;
+            height: auto !important;
+        }
         .news_body{
             display: block;
         }
@@ -350,6 +390,13 @@ footer{
     }
 
     @media (max-width: 500px) {
+        .stlion_cont{
+            display:block;
+        }
+        .person{
+            width: 100%;
+            text-align: center;
+        }
         .fadein{
             display:none !important;
         }

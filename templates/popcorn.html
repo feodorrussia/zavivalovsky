@@ -6,13 +6,13 @@
 
 {% block content %}
     <div style="padding-top:20px" align="center">
-        <img style="height: 80vh;padding: 40px 50px;" src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" alt="">
+        <img class="horse_photo" src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" alt="">
     </div>
-    <div style="background: #000;width:45%;height:60vh;margin-left: 50px;margin-top:15vh">
-        <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;">Попкорн</h1>
-        <p style="color: #fff;font-weight:500;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
-        <p style="color: #fff;font-weight:500;padding-left: 7vw;">Родился 1 января 2018 года</p>
-        <p style="color: #fff;font-weight:500;padding-left: 7vw;">Родители Пеон 19, Паутинка</p>
-        <p style="color: #fff;font-weight:600;padding-left: 7vw;">Цена: 100 000 р.</p>
+    <div class="horse_descr">
+        <h1 style="color: #ffc000;padding-left: 60px;padding-top: 30px;">Попкорн</h1>
+        <p style="color: #fff;font-weight:20px;padding-left: 40px;">Порода: Орловская рысистая, жеребец</p>
+        <p style="color: #fff;font-weight:20px;padding-left: 40px;">Родился 1 января 2018 года</p>
+        <p style="color: #fff;font-weight:20px;padding-left: 40px;">Родители Пеон 19, Паутинка</p>
+        <p style="color: #fff;font-weight:20px;padding-left: 40px;">Цена: 100 000 р.</p>
     </div>
 {% endblock %}
