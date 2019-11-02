@@ -34,12 +34,13 @@ margin: 150px auto 0 auto;
 color:#fff;}
 
 #p_prldr .svg_anm {
-position: absolute;
+position:fixed;
 width: 41px;
 height: 41px;
 background: url(../img/oval.svg) center center no-repeat;
 background-size:41px;
-margin: 16px 0 0 -16px;}
+margin: 16px 0 0 -16px;
+}
 
 /* -------- Container's styles ---------  */
 .runners{
