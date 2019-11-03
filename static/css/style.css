@@ -248,6 +248,7 @@ margin: 16px 0 0 -16px;
     height: auto;
     margin: 0 1vw;
     cursor:pointer;
+    align-self:center;
 }
 
 .img_stallion{
