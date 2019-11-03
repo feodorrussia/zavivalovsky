@@ -67,6 +67,11 @@ def heavy_ex():
     return render_template('heavy_ex.html')
 
 
+@app.route('/stallions')
+def stallions():
+    return render_template('stallions.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 '''port=8080, host='127.0.0.1'''
