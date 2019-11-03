@@ -15,6 +15,7 @@
       body {
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
+
     </style>
 </head>
 
@@ -22,11 +23,14 @@
 
 <!-- Header -->
 <div class="header">
-    <a class="home" href="\index" style="margin-left:20px"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=64
-                                        width=64/></a>
-    <img style="display:block;margin: 5px auto;padding-right:75px" src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" height=55>
-    <img class="menu_button" style="display:block;position:absolute;right:32px;margin-top:15px;cursor:pointer" src="{{ url_for( 'static', filename='img/icons/menu1.png')}}" height=25
-                                        width=36/>
+    <a class="home" href="\index" style="margin-left:20px"><img
+            src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=64
+            width=64/></a>
+    <img style="display:block;margin: 5px auto;padding-right:75px"
+         src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" height=55>
+    <img class="menu_button" style="display:block;position:absolute;right:32px;margin-top:15px;cursor:pointer"
+         src="{{ url_for( 'static', filename='img/icons/menu1.png')}}" height=25
+         width=36/>
 </div>
 
 <div class="popup_menu">
@@ -44,25 +48,31 @@
     </div>
 </div>
 
-<div class="title"></div>
+<div class="title">
+    <h1 style="color:#ffc000;font-size:6vw;padding-top:22vh" align="center">НАШИ ЛОШАДИ</h1>
+</div>
 
 <!-- Page items -->
 <div class="container-total" align="center">
     <div class="horses_link">
         <div class="block_1" style="display:flex;width:max-content" align="center">
-            <div class="horses_link_1" align="center"><a style="color:#fff" href="\stallions"><h3 style="margin:7px auto;">ЖЕРЕБЦЫ-ПРОИЗВОДИТЕЛИ</h3></a></div>
-            <div class="horses_link_2" align="center"><a style="color:#fff" href="\heavy"><h3 style="margin:7px 10px;">РУССКИЕ ТЯЖЕЛОВОЗЫ</h3></a></div>
-            <div class="horses_link_1" align="center"><a style="color:#fff" href="\runners"><h3 style="margin:7px 10px;">ОРЛОВСКИЕ РЫСАКИ</h3></a></div>
+            <div class="horses_link_1" align="center"><a style="color:#fff" href="\stallions"><h3
+                    style="margin:7px auto;">ЖЕРЕБЦЫ-ПРОИЗВОДИТЕЛИ</h3></a></div>
+            <div class="horses_link_2" align="center"><a style="color:#fff" href="\heavy"><h3 style="margin:7px 10px;">
+                РУССКИЕ ТЯЖЕЛОВОЗЫ</h3></a></div>
+            <div class="horses_link_1" align="center"><a style="color:#fff" href="\runners"><h3
+                    style="margin:7px 10px;">ОРЛОВСКИЕ РЫСАКИ</h3></a></div>
         </div>
         <div class="block_2" style="display:flex;width:max-content">
-            <div class="horses_link_2" align="center"><a style="color:#fff" href="\foals"><h3 style="margin:2vw auto;">ЖЕРЕБЯТА 2018</h3></a></div>
-            <div class="horses_link_1" align="center"><a style="color:#fff" href="\mares"><h3 style="margin:2vw auto;">КОБЫЛЫ</h3></a></div>
+            <div class="horses_link_2" align="center"><a style="color:#fff" href="\foals"><h3 style="margin:2vw auto;">
+                ЖЕРЕБЯТА 2018</h3></a></div>
+            <div class="horses_link_1" align="center"><a style="color:#fff" href="\mares"><h3 style="margin:2vw auto;">
+                КОБЫЛЫ</h3></a></div>
         </div>
 
     </div>
 
     <div style="width:70%;height:60vh;margin-top:70px" align="center">
-        <h1 style="color:#ffc000;font-size:6vw">НАШИ ЛОШАДИ</h1>
         <h4 style="color:#fff;margin-top:50px">Пара слов о лошадях завиваловской селекции</h4>
     </div>
 </div>
@@ -71,9 +81,9 @@
     <div class="line"></div>
     <div class="icon" align="center">
         <a href='https://www.instagram.com/zavivalovesky/'><img class="icon_img"
-                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
-                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
-                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
+                                                                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
+                                                                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
+                                                                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
     </div>
     <div class="line"></div>
 </div>
@@ -110,6 +120,7 @@
         });
       });
 
+
 </script>
 
 
@@ -124,6 +135,7 @@
             $(".menu_button").css({"display":"block"})
         });
     });
+
 </script>
 
 </body>

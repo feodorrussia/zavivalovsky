@@ -31,7 +31,7 @@
 <body>
 <div id="p_prldr">
     <div class="contpre" align="center">
-        <img style="height:250px;width:auto" src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}">
+        <img style="height:100px;width:auto" src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}">
         <span class="svg_anm"></span>
     </div>
 </div>
@@ -40,8 +40,8 @@
 <!-- Header -->
 <div class="header">
     <a class="home" href="\index" style="margin-left:20px"><img
-            src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=64
-            width=64/></a>
+            src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=64 width=64/></a>
+    <img style="display:block;margin: 5px auto;padding-right:75px" src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" height=55>
     <img class="menu_button" style="display:block;position:absolute;right:32px;margin-top:15px;cursor:pointer"
          src="{{ url_for( 'static', filename='img/icons/menu1.png')}}" height=25
          width=36/>
@@ -89,14 +89,13 @@
         </div>
 
         <div id="stlions_link">
-            <h1 style="color:#ffc000;margin-bottom:55px;font-size:4vw">ПРОДАЖА</h1>
+            <h1 style="color:#ffc000;margin-bottom:55px;" align="center">ПРОДАЖА</h1>
             <div id="stlions_link_block" style="width: min-content;">
-                <a class="link_stlion1" href="\popcorn" style="color:#fff;"><h1 align="left">ПОПКОРН</h1>
-                </a>
-                <a class="link_stlion2" href="\dakar" style="color:#fff;"><h1 align="left">ДАКАР</h1></a>
-                <a class="link_stlion3" href="\uprek" style="color:#fff;"><h1 align="left">УПРЁК</h1></a>
-                <a class="link_stlion4" href="\kreker" style="color:#fff;"><h1 align="left">КРЕКЕР</h1></a>
-                <a href="\sale" style="color:#fff;"><h1 align="left">Другие</h1></a>
+                <a class="link_stlion1" href="\popcorn" style="color:#fff;"><h2 align="left">ПОПКОРН</h2></a>
+                <a class="link_stlion2" href="\dakar" style="color:#fff;"><h2 align="left">ДАКАР</h2></a>
+                <a class="link_stlion3" href="\uprek" style="color:#fff;"><h2 align="left">УПРЁК</h2></a>
+                <a class="link_stlion4" href="\kreker" style="color:#fff;"><h2 align="left">КРЕКЕР</h2></a>
+                <a href="\sale" style="color:#fff;"><h2 align="left">Другие</h2></a>
             </div>
         </div>
     </div>
@@ -104,10 +103,9 @@
     <!-- About items -->
     <div id="about" class="container-about">
         <div class="middle" align="center">
-            <h1 style="color: #fff">ИСТОРИЯ</h1>
-            <h5 style="color: #fff">ПЛЕМЕННОГО КОННОГО ЗАВОДА "ЗАВИВАЛОВСКИЙ"</h5>
+            <h1 style="color: #ffc000">ИСТОРИЯ</h1>
             <img src="{{ url_for( 'static', filename='img/icons/readmore_1.png')}}"
-                 style="margin-top:30px;width:200px;cursor:pointer"
+                 style="margin-top:10vw;width:200px;cursor:pointer"
                  onmouseout="this.src='{{ url_for( 'static', filename='img/icons/readmore_1.png')}}'; this.width=200;"
                  onmouseover="this.src='{{ url_for( 'static', filename='img/icons/readmore_2.png')}}'; this.width=200;"
                  onclick="location.href='\about'"/>
@@ -118,7 +116,7 @@
     <div id="gallery" style="width: 100%; background-color: #303030;padding-bottom:20px">
         <div align="center">
             <div class="line-yellow"></div>
-            <h1 style="display: inline-block;margin: 0 20px; padding-top: 60px;padding-bottom: 20px;color:#ffc000">
+            <h1 style="display: inline-block;margin: 0 20px; padding-top: 40px;padding-bottom: 30px;color:#ffc000">
                 ГАЛЕРЕЯ</h1>
             <div class="line-yellow"></div>
         </div>
@@ -141,8 +139,7 @@
 
     <!-- News block -->
     <div class="news" align="center" onclick="location.href='/news'" style="cursor:pointer">
-        <h1 style="color:#ffc000;padding-top:20vh;margin-bottom:30px">ЖИЗНЬ ЛЮДЕЙ И ЛОШАДЕЙ ПКЗ
-            "ЗАВИВАЛОВСКИЙ"</h1>
+        <h1 style="color:#ffc000;padding-top:20vh;margin-bottom:20px">ЖИЗНЬ ЛЮДЕЙ И ЛОШАДЕЙ</h1>
         <div class="line-yellow"></div>
         <h1 style="color: #fff;margin-top:20px">НОВОСТИ</h1>
     </div>
@@ -225,15 +222,15 @@
 
 <!-- Footer items  -->
 <footer>
-    <div id="contacts" align="center" style="width: 100%;background-color: #000;padding:10px 0">
-        <img src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" style="width:50vw">
+    <div id="contacts" align="center" style="width: 100%;background-color: #000;padding:30px 0">
+        <img src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" style="width:30vw">
         <h5 style="color: #fff;;padding-top: 10px;">РОССИЯ</h5>
         <h5 style="color: #fff;">Пензенская область, Каменский район</h5>
         <h5 style="color: #fff;">село Завиваловка, Улица Совхозная 10</h5>
         <h5 style="color: #fff;">Email zavivalovesky@mail.ru</h5>
         <h5 style="color: #fff;">Телефон +7 *** ***-**-**</h5>
     </div>
-    <div style="width: 100%;height: 9vh;background-color: #404040"></div>
+    <div style="width: 100%;height: 20vh;background-color: #404040"></div>
 
 </footer>
 
