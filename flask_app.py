@@ -72,6 +72,16 @@ def stallions():
     return render_template('stallions.html')
 
 
+@app.route('/mares')
+def mares():
+    return render_template('mares.html')
+
+
+@app.route('/foals')
+def foals():
+    return render_template('foals.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 '''port=8080, host='127.0.0.1'''
