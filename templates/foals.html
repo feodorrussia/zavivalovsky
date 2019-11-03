@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Жеребята</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ url_for( 'static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for( 'static', filename='css/style.css')}}" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+    <a class="home" href="\index" style="margin-left:20px"><img
+            src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=64
+            width=64/></a>
+    <img class="menu_button" style="display:block;position:absolute;right:32px;margin-top:15px;cursor:pointer"
+         src="{{ url_for( 'static', filename='img/icons/menu1.png')}}" height=25
+         width=36/>
+</div>
+
+<div class="popup_menu">
+    <div class="popup_bg_menu"></div>
+    <div class="menu">
+        <a style="color:#fff;" href="\index"><h2 style="margin-top:100px;">ГЛАВНАЯ</h2></a>
+        <div class="line-yellow"></div>
+        <a style="color:#fff;" href="\sale"><h2>НАШИ ЛОШАДИ</h2></a>
+        <div class="line-yellow"></div>
+        <a style="color:#fff" href="\about"><h2>НАША ИСТОРИЯ</h2></a>
+        <div class="line-yellow"></div>
+        <a style="color:#fff" href="\news"><h2>НОВОСТИ</h2></a>
+        <div class="line-yellow"></div>
+        <a style="color:#fff" href="#social"><h2>КОНТАКТЫ</h2></a>
+    </div>
+</div>
+
+<!-- Title -->
+
+<div class="title_horse">
+    <img class="central" style="height:200px;" src="{{ url_for( 'static', filename='img/logo1.png')}}" alt="">
+</div>
+
+<!-- Page items -->
+
+<div class="runners">
+    <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
+
+    <div class="runner">
+        <div style="padding-top:20px" align="center">
+            <img class="horse_photo" src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}" alt="">
+        </div>
+        <div class="horse_descr">
+            <h1 style="color: #ffc000;padding-left: 60px;padding-top: 30px;">Кличка</h1>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Порода</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Дата рождения</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Родословная</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Промеры</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Характеристика</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Заслуги</p>
+        </div>
+    </div>
+
+    <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
+
+    <div class="runner">
+        <div style="padding-top:20px" align="center">
+            <img class="horse_photo" src="{{ url_for( 'static', filename='img/stallions/dakar1.png')}}" alt="">
+        </div>
+        <div class="horse_descr">
+            <h1 style="color: #ffc000;padding-left: 60px;padding-top: 30px;">Кличка</h1>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Порода</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Дата рождения</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Родословная</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Промеры</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Характеристика</p>
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">Заслуги</p>
+        </div>
+    </div>
+
+    <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
+</div>
+
+<!-- Social link -->
+
+<div id="social" class="container-social" align="center">
+    <div class="line"></div>
+    <div class="icon" align="center">
+        <a href='https://www.instagram.com/zavivalovesky/'><img class="icon_img"
+                                                                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
+                                                                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
+                                                                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
+    </div>
+    <div class="line"></div>
+</div>
+
+<!-- Footer items  -->
+<footer>
+    <div align="center" style="width: 100%;background-color: #000;padding-bottom:10px">
+        <img src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" style="width:70vw">
+        <p style="color: #fff;font-weight:500;padding-top: 20px;">РОССИЯ</p>
+        <p style="color: #fff;font-weight:300">Пензенская область, Каменский район</p>
+        <p style="color: #fff;font-weight:300">село Завиваловка, Улица Совхозная 10</p>
+        <p style="color: #fff;font-weight:400;padding-top: 10px;">Email zavivalovesky@mail.ru</p>
+        <p style="color: #fff;font-weight:400;padding-top: 10px;">Телефон +7 *** ***-**-**</p>
+    </div>
+    <div style="width: 100%;height: 100px;background-color: #404040"></div>
+
+</footer>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+<script src="{{ url_for( 'static', filename='js/bootstrap.min.js')}}"></script>
+<script src="{{ url_for( 'static', filename='js/jquery.easing.1.3.js')}}"></script>
+<script type="{{ url_for( 'static', filename='text/javascript')}}">
+      $(document).ready(function() {
+        $('a[href^="#"]').click(function(event) {
+            var id = $(this).attr("href");
+            var offset = 60;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({scrollTop:target}, 800, $.easing.easeInOutExpo());
+            event.preventDefault();
+        });
+      });
+
+</script>
+
+<script>
+    $(function(){
+        $(".menu_button").click(function() {
+            $(".menu_button").css({"display":"none"})
+            $(".popup_menu").css({"display":"block"})
+        });
+        $(".popup_bg_menu").click(function() {
+            $(".popup_menu").css({"display":"none"})
+            $(".menu_button").css({"display":"block"})
+        });
+    });
+
+</script>
+
+
+</body>
+</html>
