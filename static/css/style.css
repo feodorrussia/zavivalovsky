@@ -89,16 +89,16 @@ margin: 16px 0 0 -16px;
 }
 
 .container-about{
-    height:100vh;
-    background-image: url("../img/history/history.png");
-    background-position: center;
+    height:95vh;
+    background-image: url("../img/history/history_1.png");
+    background-position: top;
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
 }
 
 .middle{
-    padding-top:35vh;
+    padding-top:25vh;
 }
 
 .container-title{
