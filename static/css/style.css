@@ -90,7 +90,7 @@ margin: 16px 0 0 -16px;
 
 .container-about{
     height:95vh;
-    background-image: url("../img/history/history_1.png");
+    background-image: url("../img/landscapes/3.1.png");
     background-position: top;
     background-size: cover;
     text-align: center;
@@ -161,7 +161,7 @@ margin: 16px 0 0 -16px;
 .news{
     width:100%;
     height:90vh;
-    background-image: url('../img/landscapes/3.1.png');
+    background-image: url('../img/history/history_1.png');
     background-position: center;
     background-size: cover;
     background-repeat: none;
