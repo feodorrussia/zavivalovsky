@@ -15,6 +15,8 @@
       body {
         padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
+
+
     </style>
 </head>
 
@@ -22,11 +24,14 @@
 
 <!-- Header -->
 <div class="header">
-    <a class="home" href="\index" style="margin-left:20px"><img src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=64
-                                        width=64></a>
-    <img style="display:block;margin: 5px auto;padding-right:75px" src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" height=55>
-    <img class="menu_button" style="display:block;position:absolute;right:32px;margin-top:15px;cursor:pointer" src="{{ url_for( 'static', filename='img/icons/menu1.png')}}" height=25
-                                        width=36>
+    <a class="home" href="\index" style="margin-left:20px"><img
+            src="{{ url_for( 'static', filename='img/icons/icon-home.png')}}" height=64
+            width=64></a>
+    <img style="display:block;margin: 5px auto;padding-right:75px"
+         src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" height=55>
+    <img class="menu_button" style="display:block;position:absolute;right:32px;margin-top:15px;cursor:pointer"
+         src="{{ url_for( 'static', filename='img/icons/menu1.png')}}" height=25
+         width=36>
 </div>
 
 <div class="popup_menu">
@@ -46,10 +51,23 @@
 
 <!-- Page items -->
 <div class="container-total">
-    <div class="title" style="height:max-content;background-image:url('static/img/history/history.png');background-position: top;padding-top:55px;padding-bottom:15px" align="center">
-        <h1 style="color: #ffc000;font-size:60px">НАША ИСТОРИЯ</h1>
-        <div class="line-yellow"></div>
-        <p style="color: #fff;margin-top:20px;font-size:15px">Пара слов о Завиваловском</p>
+    <div class="title"
+         style="height:95vh;background-image:url('static/img/history/history.png');background-position: top;padding-top:55px;padding-bottom:15px">
+        <div style="width:max-content;padding-left:20px" align="center">
+            <h1 style="color: #ffc000;font-size:60px">НАША ИСТОРИЯ</h1>
+            <div class="line"></div>
+            <p style="color: #fff;margin-top:20px;font-size:18px;width:350px">Племенной конный завод "Завиваловский"
+                насчитывает в своей
+                истории более 150 лет. На лошадях, выросших под крышами его конюшен и вскормленных травой каменских
+                полей,
+                воевали при царе, соревновались на иподромах СССР и ставили рекорды в современной России.
+                "Завиваловский" в
+                полной мере сохранил много вековые традиции селекции лошадей Орловской породы и пробует свои силы в
+                новых
+                направлениях.</p>
+            <p style="color: #fff;margin-top:20px;font-size:20px">"Завиваловский"</p>
+            <p style="color: #fff;font-size:18px;">Чтя прошлое, сегодня стемимся в будущее.</p>
+        </div>
     </div>
 
     <!-- предыстория -->
@@ -143,9 +161,9 @@
     <div class="line"></div>
     <div class="icon" align="center">
         <a href='https://www.instagram.com/zavivalovesky/'><img class="icon_img"
-                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
-                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
-                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
+                                                                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
+                                                                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
+                                                                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
     </div>
     <div class="line"></div>
 </div>
@@ -182,6 +200,8 @@
         });
       });
 
+
+
 </script>
 
 
@@ -196,6 +216,8 @@
             $(".menu_button").css({"display":"block"})
         });
     });
+
+
 </script>
 
 </body>

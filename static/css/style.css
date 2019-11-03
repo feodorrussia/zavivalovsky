@@ -69,8 +69,8 @@ margin: 16px 0 0 -16px;
 }
 .title{
     height:50vh;
-    background-image:url("../img/landscapes/3.1.png");
-    background-position: center;
+    background-image:url("../img/backgrounds/fon_title2.jpg");
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -161,7 +161,7 @@ margin: 16px 0 0 -16px;
 .news{
     width:100%;
     height:90vh;
-    background-image: url('../img/backgrounds/fon_title2.jpg');
+    background-image: url('../img/landscapes/3.1.png');
     background-position: center;
     background-size: cover;
     background-repeat: none;
@@ -398,15 +398,15 @@ footer{
 	        width: 64px;
         }
         .fadein img{
-            width:35vw !important;
-            height: auto !important;
+            width:auto !important;
+            height: 40vw !important;
         }
         .img img{
-            width:35vw !important;
-            height: auto !important;
+            width:auto !important;
+            height: 40vw !important;
         }
         #stallions{
-            height:auto !important;
+            height:50vw !important;
         }
         .story_images{
             display:none;
@@ -420,9 +420,13 @@ footer{
     }
 
     @media (max-width: 500px) {
+        #stallions{
+            height:auto !important;
+        }
         .stlion_cont{
             display:block;
         }
+        .h1,h1{font-size:8vw !important}.h2,h2{font-size:5vw !important}.h3,h3{font-size:3vw !important}.h4,h4{font-size:2vw !important}.h5,h5{font-size:2vw !important}
         .person{
             width: 100%;
             text-align: center;
