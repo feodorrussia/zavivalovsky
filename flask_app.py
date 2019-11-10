@@ -2,6 +2,8 @@ from flask import Flask, url_for, session, redirect, render_template, request, j
     make_response, \
     request
 
+from login import LoginForm
+
 app = Flask(__name__)
 app.secret_key = 'any random string'
 
@@ -10,6 +12,15 @@ app.secret_key = 'any random string'
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    form = LoginForm()
+    password = form.password.data
+    if password=='123467890':
+        return redirect("/title")
+    return render_template('loginform.html', form=form)
 
 
 @app.route('/about')
