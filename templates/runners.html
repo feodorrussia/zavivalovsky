@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Орловские рысаки</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% extends "base.html" %}
 
-    <!-- Le styles -->
-    <link href="{{ url_for( 'static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ url_for( 'static', filename='css/style.css')}}" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-</head>
 
-<body style="background-color: #101010">
-
+{% block content %}
 <!-- Header -->
 <div class="header">
     <a class="home" href="\index" style="margin-left:20px"><img
@@ -71,7 +53,7 @@
     <div class="runner" onclick="location.href='\kreker'" style="cursor:pointer">
         <img src="{{ url_for( 'static', filename='img/stallions/kreker1.png')}}" style="height:40vh;width:auto;"/>
         <div>
-            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Крекер</h1>
+            <h1 style="color: #ffc000;padding-left: 10vw;">Крекер</h1>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родился 1 января 2018 года</p>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Кальмиус, Коррида</p>
@@ -84,7 +66,7 @@
     <div class="runner" onclick="location.href='\dakar'" style="cursor:pointer">
         <img src="{{ url_for( 'static', filename='img/stallions/dakar1.png')}}" style="height:40vh;width:auto;"/>
         <div>
-            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Дакар</h1>
+            <h1 style="color: #ffc000;padding-left: 10vw;">Дакар</h1>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родился 12 мая 2018 года</p>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Кальмиус, Динамика</p>
@@ -97,7 +79,7 @@
     <div class="runner" onclick="location.href='/uprek'" style="cursor:pointer">
         <img src="{{ url_for( 'static', filename='img/stallions/3.jpg')}}" style="height:40vh;width:auto;"/>
         <div>
-            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">Упрёк</h1>
+            <h1 style="color: #ffc000;padding-left: 10vw;">Упрёк</h1>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Порода: Орловская рысистая, жеребец</p>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родился в 2018 году</p>
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">Родители Пеон 19, Убойная</p>
@@ -107,143 +89,4 @@
 
     <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
 </div>
-
-<!-- Social link -->
-
-<div id="social" class="container-social" align="center">
-    <div class="line"></div>
-    <div class="icon" align="center">
-        <a href='https://www.instagram.com/zavivalovesky/'><img class="icon_img"
-                src="{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}"
-                onmouseout="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_1.png')}}';"
-                onmouseover="this.src='{{ url_for( 'static', filename='img/icons/icon-instagram_2.png')}}';"/></a>
-    </div>
-    <div class="line"></div>
-</div>
-
-<!-- Footer items  -->
-<footer>
-    <div id="contacts" align="center" style="width: 100%;background-color: #000;padding:30px 0">
-        <img src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}" style="width:30vw">
-        <h5 style="color: #fff;;padding-top: 10px;">РОССИЯ</h5>
-        <h5 style="color: #fff;">Пензенская область, Каменский район</h5>
-        <h5 style="color: #fff;">село Завиваловка, Улица Совхозная 10</h5>
-        <h5 style="color: #fff;">Email zavivalovesky@mail.ru</h5>
-        <h5 style="color: #fff;">Телефон +7 *** ***-**-**</h5>
-    </div>
-    <div style="width: 100%;height: 20vh;background-color: #404040"></div>
-
-</footer>
-
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
-<script src="{{ url_for( 'static', filename='js/bootstrap.min.js')}}"></script>
-<script src="{{ url_for( 'static', filename='js/jquery.easing.1.3.js')}}"></script>
-<script>
-      $(document).ready(function() {
-        $('a[href^="#"]').click(function(event) {
-            var id = $(this).attr("href");
-            var offset = 60;
-            var target = $(id).offset().top - offset;
-            $('html, body').animate({scrollTop:target}, 800, $.easing.easeInOutExpo());
-            event.preventDefault();
-        });
-      });
-
-</script>
-<script>
-    $(function(){
-        $("#1_img").click(function() {
-            $("#1").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#2_img").click(function() {
-            $("#2").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#3_img").click(function() {
-            $("#3").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#4_img").click(function() {
-            $("#4").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#5_img").click(function() {
-            $("#5").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#6_img").click(function() {
-            $("#6").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#7_img").click(function() {
-            $("#7").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#8_img").click(function() {
-            $("#8").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#9_img").click(function() {
-            $("#9").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#10_img").click(function() {
-            $("#10").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#11_img").click(function() {
-            $("#11").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#12_img").click(function() {
-            $("#12").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#13_img").click(function() {
-            $("#13").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#14_img").click(function() {
-            $("#14").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#15_img").click(function() {
-            $("#15").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-     })
-     $(function(){
-        $(".popup_bg").click(function() {
-            $(".popup").css({"display":"none"})
-        });
-    })
-
-</script>
-<script>
-    $(function(){
-        $(".menu_button").click(function() {
-            $(".menu_button").css({"display":"none"})
-            $(".popup_menu").css({"display":"block"})
-        });
-        $(".popup_bg_menu").click(function() {
-            $(".popup_menu").css({"display":"none"})
-            $(".menu_button").css({"display":"block"})
-        });
-    });
-
-</script>
-<link rel="stylesheet" href="/static/css/style.css?ver=261" type="text/css"/>
-<link rel="stylesheet" href="/static/css/bootstrap.min.css?ver=3" type="text/css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
-
-
-</body>
-</html>
+{% endblock %}
