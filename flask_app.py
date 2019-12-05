@@ -1,26 +1,65 @@
-from flask import Flask, url_for, session, redirect, render_template, request, jsonify, \
-    make_response, \
-    request
+from __future__ import unicode_literals
 
+from flask import redirect, render_template, request
+
+from constants import *
+from db import Gallery
+from db import Admin
+from db import Photo
 from login import LoginForm
-
-app = Flask(__name__)
-app.secret_key = 'any random string'
 
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    gallery = Gallery.query.filter_by(gallery_flag=1).all()
+
+    return render_template('index.html', gallery=gallery)
 
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     form = LoginForm()
     password = form.password.data
-    if password=='123467890':
-        return redirect("/title")
+    if Admin.query.filter_by(password=password).all():
+        return redirect("/ed_index")
     return render_template('loginform.html', form=form)
+
+
+@app.route('/ed_index')
+def ed_index():
+    title = Photo.query.filter_by(descr='title_index').first()
+    stallions = [Photo.query.filter_by(descr='stallions').first(),]
+    return render_template('ed_index.html', title=title, stallions=stallions)
+
+
+@app.route('/ed_gallery', methods=['POST', 'GET'])
+def ed_gallery():
+    if request.method == 'GET':
+        return render_template('ed_gallery.html', gallery=Gallery.query.filter_by(gallery_flag=1).all())
+    elif request.method == 'POST':
+
+        return redirect("/title")
+
+
+@app.route('/upload_file', methods=['POST', 'GET'])
+def file_upload():
+    global i
+    if request.method == 'GET':
+        return render_template('upload_file.html', )
+    elif request.method == 'POST':
+        name = request.form.get('name')
+        f = request.files['file']
+        x = f.__repr__()
+        tmp = f.read()
+        file_name = x[x.index("'") + 1:x.index("'", 15)]
+        n = open("static/img/gallery/" + file_name, "wb")
+        n.write(tmp)
+        n.close()
+        photo = Gallery(filename=file_name)
+        db.session.add(photo)
+        db.session.commit()
+        return redirect("/ed_gallery")
 
 
 @app.route('/about')

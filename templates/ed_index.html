@@ -1,0 +1,24 @@
+{% extends "workpage.html" %}
+
+
+{% block display %}
+    <div class="title" style="background-image: url({{'static/img/' + title.filename}})"></div>
+    <div class="stallions" style="background-image: url({{'static/img/' + stallions.filename}})"></div>
+{% endblock %}
+
+
+{% block tools %}
+    <div class="title_tools">
+        <input class="form-control" id="{{title.id}}" placeholder="{{title.id}} :{{title.filename}}" name="order">
+    </div>
+    <div class="stallions">
+        <input class="form-control" id="{{stallions[0].id}}" placeholder="{{stallions[0].id}} :{{stallions[0].filename}}" name="order">
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+    <script>
+
+    </script>
+{% endblock %}
