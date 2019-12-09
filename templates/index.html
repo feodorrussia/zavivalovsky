@@ -2,6 +2,11 @@
 
 
 {% block content %}
+    <title>ПКЗ "Завиваловский"</title>
+{% endblock %}
+
+
+{% block content %}
 <div id="p_prldr">
     <div class="contpre" align="center">
         <img style="align-self:center;height:auto;width:400px;max-width:95vw;"
@@ -85,8 +90,8 @@
         {% for i in range(3) %}
         <div style="display:flex;margin:10px 10px;width:30vh" align="center">
             {% for j in range(3) %}
-            <img id="{{gallery[i*3+j].id}}_img" class="image"
-                 src="{{ url_for( 'static', filename='img/gallery/'+gallery[i*3+j].filename)}}"/>
+            <img id="{{i*3+j+1}}_img" class="image"
+                 src="{{ url_for( 'static', filename='img/gallery/'+gallery.query.filter_by(descr='gallery').all()[i*3+j].filename)}}"/>
             {% endfor %}
         </div>
         {% endfor %}
@@ -106,9 +111,9 @@
 
         <div class="carousel-inner" role="listbox">
             {% for i in range(9) %}
-            <div id="{{gallery[i].id}}" class="item" align="center">
+            <div id="{{i+1}}" class="item" align="center">
                 <img class="carousel_img"
-                     src="{{ url_for( 'static', filename='img/gallery/'+gallery[i].filename)}}"/>
+                     src="{{ url_for( 'static', filename='img/gallery/'+gallery.query.filter_by(descr='gallery',id=i).first().filename)}}"/>
             </div>
             {% endfor %}
 
@@ -166,42 +171,12 @@
             $("#9").attr('class', 'item active');
             $(".popup").css({"display":"block"})
         });
-        $("#10_img").click(function() {
-            $("#10").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#11_img").click(function() {
-            $("#11").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#12_img").click(function() {
-            $("#12").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#13_img").click(function() {
-            $("#13").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#14_img").click(function() {
-            $("#14").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
-        $("#15_img").click(function() {
-            $("#15").attr('class', 'item active');
-            $(".popup").css({"display":"block"})
-        });
      })
      $(function(){
         $(".popup_bg").click(function() {
             $(".popup").css({"display":"none"})
         });
     })
-
-
-
-
-
-
 </script>
 <script>
     $(function(){

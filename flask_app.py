@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from flask import redirect, render_template, request
 
 from constants import *
-from db import Gallery
 from db import Admin
 from db import Photo
 from login import LoginForm
@@ -12,7 +11,7 @@ from login import LoginForm
 @app.route('/')
 @app.route('/index')
 def index():
-    gallery = Gallery.query.filter_by(gallery_flag=1).all()
+    gallery = Photo()
 
     return render_template('index.html', gallery=gallery)
 

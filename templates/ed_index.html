@@ -9,9 +9,14 @@
 
 {% block tools %}
     <div class="title_tools">
-        <input class="form-control" id="{{title.id}}" placeholder="{{title.id}} :{{title.filename}}" name="order">
+        <input class="form-control" id="{{title.id}}" placeholder="Текущая :{{title.filename}}" name="title">
     </div>
     <div class="stallions">
+        <div style="display:flex;">
+            {%for i in stallions%}
+                <div style="padding:20px auto;">{{i.name}}</div>
+            {%endfor%}
+        </div>
         <input class="form-control" id="{{stallions[0].id}}" placeholder="{{stallions[0].id}} :{{stallions[0].filename}}" name="order">
     </div>
 {% endblock %}
