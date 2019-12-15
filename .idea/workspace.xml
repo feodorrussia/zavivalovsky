@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqldatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqldatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style_admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/arrow_left.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/arrow_left.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/arrow_right.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/arrow_right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/divider-pattern.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/divider-pattern.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_2.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_2.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_7.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_7.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/HL_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/icon-home.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/slider/icon-home.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/icon-instagram_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/icon-instagram_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/icon-instagram_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/icon-instagram_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/logo_zav_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/logo_zav_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/menu1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/menu1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/line-pattern-yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/line-pattern-yellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/line-pattern.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/line-pattern.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/oval.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/oval.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ed_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ed_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_title.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/upload_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload_file.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/workpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/workpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,22 +215,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="добавил __pycache__" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1576403570784">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1576404617238">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576403570784" />
-    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1576403570784">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576404617238" />
+    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1576404617237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576403570784" />
-    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1576403570784">
+    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576404617237" />
+    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1576404617237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576403570784" />
-    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1576403570784">
+    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576404617237" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1576404617237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576403570784" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576404617237" />
   </component>
   <component name="masterDetails">
     <states>
