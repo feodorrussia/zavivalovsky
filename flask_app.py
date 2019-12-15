@@ -1,4 +1,4 @@
-# -*- coding: ANSI -*-
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from flask import redirect, render_template, request
