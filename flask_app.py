@@ -15,10 +15,10 @@ from login import LoginForm
 @app.route('/')
 @app.route('/index')
 def index():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
+    n = int(Data.query.filter_by(name='stallions').first().descr)
     return render_template('index.html', photo=Photo(), data=Data(),
-                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
+                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr),
+                           num=[str(i) for i in range(n)])
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -47,6 +47,50 @@ def ed_title():
             photo.filename = filename
             db.session.commit()
         return render_template('ed_title.html', photo=Photo(), data=Data(), len=lenght, photos=Files())
+
+
+@app.route('/ed_stallion/<int:index>', methods=['POST', 'GET'])
+def ed_stallion(index):
+    if Admin.query.filter_by(id=0).first().status != 1:
+        return redirect("/login")
+    a = Files.query.all()
+    lenght = len(a)
+    n = int(Data.query.filter_by(name='stallions').first().descr)
+    if request.method == 'GET':
+        return render_template('ed_stallion.html', photo=Photo(), data=Data(), len=lenght, photos=Files(),
+                               ln_st=n, index=str(index), num=[str(i) for i in range(n)])
+    elif request.method == 'POST':
+        filename = request.form.get('background')
+        name = request.form.get('name')
+        file = open(f"static/text_data/stallion{index}.txt", "r").read().split("\n/\n")
+        if filename != '' and Files.query.filter_by(filename=filename).all():
+            file[2] = filename
+            photo = Photo.query.filter_by(descr=f"stallion{index}").first()
+            photo.filename = filename
+            db.session.commit()
+        if name != '':
+            file[0] = name
+            inf = Data.query.filter_by(name=f"stallion{index}").first()
+            inf.descr = name
+            db.session.commit()
+        open(f"static/text_data/stallion{index}.txt", "w").write("\n/\n".join(file))
+        return redirect(f"/ed_stallion/{index}")
+
+
+@app.route('/add_stallion', methods=['POST', 'GET'])
+def add_stallion():
+    if Admin.query.filter_by(id=0).first().status != 1:
+        return redirect("/login")
+    n = int(Data.query.filter_by(name='stallions').first().descr)
+    file = open(f"static/text_data/stallion{n}.txt", "w")
+    file.write("КЛИЧКА\n/\nПорода: \nРодился \nРодители \nЦена: \n/\n3.jpg")
+    inf = Data(name=f"stallion{n}", descr="КЛИЧКА")
+    file = Photo(filename="3.jpg", descr=f"stallion{n}")
+    Data.query.filter_by(name='stallions').first().descr = str(n + 1)
+    db.session.add(inf)
+    db.session.add(file)
+    db.session.commit()
+    return redirect(f"/ed_stallion/{n}")
 
 
 @app.route('/ed_about', methods=['POST', 'GET'])
@@ -172,11 +216,12 @@ def add_block():
         f.write(file + new_block)
     return redirect("/ed_story/0")
 
+
 @app.route('/delete_block/<int:index>', methods=['POST', 'GET'])
 def delete_block(index):
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
-    if index==0:
+    if index == 0:
         return redirect("/ed_story/0")
     file = information_extractor("history.txt")
     del file[index]
@@ -189,7 +234,6 @@ def delete_block(index):
 def file_upload():
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
-    global i
     if request.method == 'GET':
         return render_template('upload_file.html', )
     elif request.method == 'POST':
@@ -209,118 +253,95 @@ def file_upload():
 
 @app.route('/about')
 def about():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     history = information_extractor("history.txt")
     data = [i.split("\n/\n") for i in history]
+    print(data)
     for i in data:
         i.append(i[2])
         i[2] = i[2].split("; ")
         i[1] = i[1].split("\n\n")
     return render_template('about.html',
-                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr), history=data)
+                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr),
+                           history=data)
 
 
-@app.route('/popcorn')
-def popcorn():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
-    return render_template('popcorn.html',
+@app.route('/stallion/<int:index>')
+def stallion(index):
+    file = information_extractor("stallion" + str(index)+".txt")[0].split("\n/\n")
+    file[1] = file[1].split("\n")
+    file[2] = file[2].split("; ")
+    return render_template('stallion.html', stallion=file,
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/uprek')
 def uprek():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('uprek.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/prelat')
 def prelat():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('prelat.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/dakar')
 def dakar():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('dakar.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/kreker')
 def kreker():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('kreker.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/sale')
 def sale():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('sale.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/news')
 def news():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('news.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/runners')
 def runners():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('runners.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/heavy')
 def heavy():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('heavy.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/heavy_ex')
 def heavy_ex():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('heavy_ex.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/stallions')
 def stallions():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('stallions.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/mares')
 def mares():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('mares.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
 @app.route('/foals')
 def foals():
-    Admin.query.filter_by(id=0).first().status = 0
-    db.session.commit()
     return render_template('foals.html',
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 

@@ -1,0 +1,10 @@
+{% extends "ed_stallions_prev.html" %}
+
+
+{% block ind_tools %}
+    <input class="form-control" name="name" style="margin-bottom:10px" autocomplete="off" id="{{data.query.filter_by(name='stallion'+index).first().id}}" placeholder="Текущая подпись: {{data.query.filter_by(name='stallion'+index).first().descr}}">
+    <div style="display:flex">
+        <input class="form-control" name="background" autocomplete="off" id="{{photo.query.filter_by(descr='stallion'+index).first().id}}" placeholder="Текущая: {{photo.query.filter_by(descr='stallion'+index).first().filename}}">
+        <img class="button" src="{{ url_for( 'static', filename='img/server/list.png')}}" style="cursor:pointer;margin-left:10px" height=50 width=55>
+    </div>
+{% endblock %}

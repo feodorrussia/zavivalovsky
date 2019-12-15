@@ -1,0 +1,19 @@
+{% extends "stallions_ex.html" %}
+
+{% block title %}
+<title>{{stallion[0]}}</title>
+{% endblock %}
+
+{% block stallion %}
+    <div style="padding-top:20px" align="center">
+        {% for i in stallion[2] %}
+            <img class="horse_photo" src="{{ url_for( 'static', filename='img/user/'+i)}}" alt="">
+        {% endfor %}
+    </div>
+    <div class="horse_descr">
+        <h1 style="color: #ffc000;padding-left: 60px;padding-top: 30px;">{{stallion[0]}}</h1>
+        {% for i in stallion[1] %}
+            <p style="color: #fff;font-weight:20px;padding-left: 40px;">{{i}}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
