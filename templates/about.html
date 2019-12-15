@@ -23,106 +23,28 @@
     <div class="title"
          style="height:95vh;min-height:max-content;background-image:url('static/img/history/history.png');background-position: top;padding-bottom:30px" align="center">
         <div style="max-width: 100%;background:rgba(0,0,0,0.5);width:max-content;padding:55px 40px" align="center">
-            <h1 style="color: #ffc000;">НАША ИСТОРИЯ</h1>
+            <h1 style="color: #ffc000;">{{history[0][0]}}</h1>
             <div class="line"></div>
-            <p style="color: #fff;margin-top:20px;font-size:18px;width:350px">Племенной конный завод "Завиваловский"
-                насчитывает в своей
-                истории более 150 лет. На лошадях, выросших под крышами его конюшен и вскормленных травой каменских
-                полей,
-                воевали при царе, соревновались на иподромах СССР и ставили рекорды в современной России.
-                "Завиваловский" в
-                полной мере сохранил много вековые традиции селекции лошадей Орловской породы и пробует свои силы в
-                новых
-                направлениях.</p>
-            <p style="color: #fff;margin-top:20px;font-size:20px">"Завиваловский"</p>
-            <p style="color: #fff;font-size:18px;">Чтя прошлое, сегодня стемимся в будущее.</p>
+            {% for i in history[0][1] %}
+                <p style="color: #fff;margin-top:20px;font-size:18px;width:350px">{{i}}</p>
+            {% endfor %}
         </div>
     </div>
 
-    <!-- предыстория -->
+    {% for i in history[1:] %}
     <div style="background: #202020;display: flex;padding-top:10px">
         <div class="story_images" align="left">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/19centery_2.jpg')}}" alt="">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/19centery.jpg')}}" alt="">
+            {% for j in i[2] %}
+                <img style="width:90%;padding: 20px 0px"
+                 src="{{ url_for( 'static', filename='img/user/'+j)}}" alt="">
+            {% endfor %}
         </div>
         <div class="story_text" style="background: #000">
-            <h1 style="color: #ffc000;" align="center">Предыстория</h1>
-            <p style="color: #fff;font-weight:500" align="center"></p>
+            <h1 style="color: #ffc000;" align="center">{{i[0]}}</h1>
+            {% for j in i[1] %}
+                <p style="color: #fff;margin-top:10px;font-size:18px;">{{j}}</p>
+            {% endfor %}
         </div>
     </div>
-    <!-- Царское время -->
-    <div style="background: #000;display: flex">
-        <div class="story_text" style="background: #202020">
-            <h1 style="color: #ffc000;" align="center">Развитие в царское время</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
-        <div class="story_images" align="left">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/ladyzhenskiy.jpg')}}" alt="">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/20century.jpg')}}" alt="">
-        </div>
-    </div>
-    <!-- Советское время -->
-    <div style="background: #202020;display: flex">
-        <div class="story_images" align="left">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/ussr_39.jpg')}}" alt="">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/20century_ussr.jpg')}}" alt="">
-        </div>
-        <div class="story_text" style="background: #000">
-            <h1 style="color: #ffc000;" align="center">Развитие в советское время</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
-    </div>
-    <!-- ВОВ -->
-    <div style="background: #000;display: flex">
-        <div class="story_text" style="background: #202020">
-            <h1 style="color: #ffc000;" align="center">"Завиваловский" во время Великой Отечественной Войны</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
-        <div class="story_images" align="left">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/vov.jpg')}}" alt="">
-        </div>
-    </div>
-    <!-- послевоенное время -->
-    <div style="background: #202020;display: flex">
-        <div class="story_images" align="left">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/dawn.jpg')}}" alt="">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/dawn_2.jpg')}}" alt="">
-        </div>
-        <div class="story_text" style="background: #000">
-            <h1 style="color: #ffc000;" align="center">Послевоенное время или расцвет "Завиваловского"</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
-    </div>
-    <!-- 90-е -->
-    <div style="background: #000;display: flex">
-        <div class="story_text" style="background: #202020">
-            <h1 style="color: #ffc000;" align="center">Кризис 90-х и спад производства</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
-        <div class="story_images" align="left">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/history/90.jpg')}}" alt="">
-        </div>
-    </div>
-    <!-- Сегодня -->
-    <div style="background: #202020;display: flex">
-        <div class="story_images" align="left">
-            <img style="width:90%;padding: 20px 0px"
-                 src="{{ url_for( 'static', filename='img/gallery/HL_10.png')}}" alt="">
-        </div>
-        <div class="story_text" style="background: #000">
-            <h1 style="color: #ffc000;" align="center">Развитие "Завиваловского" сегодня</h1>
-            <p style="color: #fff;font-weight:500" align="center">...</p>
-        </div>
-    </div>
-</div>
+    {% endfor %}
 {% endblock %}

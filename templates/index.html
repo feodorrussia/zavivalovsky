@@ -10,7 +10,7 @@
 <div id="p_prldr">
     <div class="contpre" align="center">
         <img style="align-self:center;height:auto;width:400px;max-width:95vw;"
-             src="{{ url_for( 'static', filename='img/icons/logo_zav_1.png')}}">
+             src="{{ url_for( 'static', filename='img/server/logo_zav_1.png')}}">
         <span class="svg_anm"></span>
     </div>
 </div>
@@ -33,7 +33,7 @@
 </div>
 
 <!-- Title -->
-<div class="container-title"></div>
+<div class="container-title" style="background-image: url({{'static/img/user/' + photo.query.filter_by(descr='container-title').first().filename}}"></div>
 
 <!-- Page items -->
 <div class="container-total">
@@ -41,20 +41,17 @@
     <!-- Stallions -->
     <div id="stallions" style="display:flex; background: #202020;margin-left: 50px;margin-right: 50px;height: 95vh;">
         <div class="fadein" align="central">
-            <img class="img_stallion" src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}"
+            <img class="img_stallion" src="{{ url_for( 'static', filename='img/user/popcorn1.png')}}"
                  alt="Попкорн">
-            <img class="img_stallion" src="{{ url_for( 'static', filename='img/stallions/dakar1.png')}}" alt="Дакар">
-            <img class="img_stallion" src="{{ url_for( 'static', filename='img/stallions/3.jpg')}}" alt="Упрёк">
-            <img class="img_stallion" src="{{ url_for( 'static', filename='img/stallions/kreker1.png')}}" alt="Крекер">
+            <img class="img_stallion" src="{{ url_for( 'static', filename='img/user/dakar1.png')}}" alt="Дакар">
+            <img class="img_stallion" src="{{ url_for( 'static', filename='img/user/kreker1.png')}}" alt="Крекер">
         </div>
         <div class="img">
-            <img class="img_stlion1" src="{{ url_for( 'static', filename='img/stallions/popcorn1.png')}}"
+            <img class="img_stlion1" src="{{ url_for( 'static', filename='img/user/popcorn1.png')}}"
                  onclick="location.href='\popcorn'">
-            <img class="img_stlion2" src="{{ url_for( 'static', filename='img/stallions/dakar1.png')}}"
+            <img class="img_stlion2" src="{{ url_for( 'static', filename='img/user/dakar1.png')}}"
                  onclick="location.href='\dakar'">
-            <img class="img_stlion3" src="{{ url_for( 'static', filename='img/stallions/3.jpg')}}"
-                 onclick="location.href='\uprek'">
-            <img class="img_stlion4" src="{{ url_for( 'static', filename='img/stallions/kreker1.png')}}"
+            <img class="img_stlion4" src="{{ url_for( 'static', filename='img/user/kreker1.png')}}"
                  onclick="location.href='\kreker'">
         </div>
 
@@ -63,7 +60,6 @@
             <div id="stlions_link_block" style="width: min-content;">
                 <a class="link_stlion1" href="\popcorn" style="color:#fff;"><h2 align="left">ПОПКОРН</h2></a>
                 <a class="link_stlion2" href="\dakar" style="color:#fff;"><h2 align="left">ДАКАР</h2></a>
-                <a class="link_stlion3" href="\uprek" style="color:#fff;"><h2 align="left">УПРЁК</h2></a>
                 <a class="link_stlion4" href="\kreker" style="color:#fff;"><h2 align="left">КРЕКЕР</h2></a>
                 <a href="\sale" style="color:#fff;"><h2 align="left">Другие</h2></a>
             </div>
@@ -71,11 +67,11 @@
     </div>
 
     <!-- About items -->
-    <div id="about" class="container-about">
+    <div id="about" class="container-about" onclick="location.href='/about'" style="background-image: url({{'static/img/user/' + photo.query.filter_by(descr='about').first().filename}});cursor:pointer">
         <div class="middle" align="center">
             <h1 style="color: #fff">ИСТОРИЯ</h1>
             <div class="line-yellow"></div>
-            <h1 style="color:#ffc000;margin-bottom:20px;">ЖИЗНЬ ЛЮДЕЙ И ЛОШАДЕЙ</h1>
+            <h1 style="color:#ffc000;margin-bottom:20px;">{{data.query.filter_by(name='about').first().descr}}</h1>
         </div>
     </div>
 
@@ -91,17 +87,17 @@
         <div style="display:flex;margin:10px 10px;width:30vh" align="center">
             {% for j in range(3) %}
             <img id="{{i*3+j+1}}_img" class="image"
-                 src="{{ url_for( 'static', filename='img/gallery/'+gallery.query.filter_by(descr='gallery').all()[i*3+j].filename)}}"/>
+                 src="{{ url_for( 'static', filename='img/user/'+photo.query.filter_by(descr='gallery').all()[i*3+j].filename)}}"/>
             {% endfor %}
         </div>
         {% endfor %}
     </div>
 
     <!-- News block -->
-    <div class="news" align="center" onclick="location.href='/news'" style="cursor:pointer">
+    <div class="news" align="center" onclick="location.href='/news'" style="background-image: url({{'static/img/user/' + photo.query.filter_by(descr='news').first().filename}});cursor:pointer">
         <h1 style="color: #fff;padding-top:20vh;margin-bottom:20px">НОВОСТИ</h1>
         <div class="line-yellow"></div>
-        <h1 style="color:#ffc000;margin-bottom:20px">ЖИЗНЬ ЛЮДЕЙ И ЛОШАДЕЙ</h1>
+        <h1 style="color:#ffc000;margin-bottom:20px">{{data.query.filter_by(name='about').first().descr}}</h1>
     </div>
 </div>
 
@@ -113,16 +109,16 @@
             {% for i in range(9) %}
             <div id="{{i+1}}" class="item" align="center">
                 <img class="carousel_img"
-                     src="{{ url_for( 'static', filename='img/gallery/'+gallery.query.filter_by(descr='gallery',id=i).first().filename)}}"/>
+                     src="{{ url_for( 'static', filename='img/gallery/'+photo.query.filter_by(descr='gallery',id=i).first().filename)}}"/>
             </div>
             {% endfor %}
 
             <a class="left carousel-control" href="#carousel-id" role="button" data-slide="prev">
-                <img src="{{ url_for( 'static', filename='img/arrow_left.png')}}"
+                <img src="{{ url_for( 'static', filename='img/server/arrow_left.png')}}"
                      style="margin:auto auto;margin-top:30vh;height:96px"/>
             </a>
             <a class="right carousel-control" href="#carousel-id" role="button" data-slide="next">
-                <img src="{{ url_for( 'static', filename='img/arrow_right.png')}}"
+                <img src="{{ url_for( 'static', filename='img/server/arrow_right.png')}}"
                      style="margin:auto auto;margin-top:30vh;height:96px"/>
             </a>
         </div>

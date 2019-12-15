@@ -40,7 +40,7 @@ top:51vh;
 left:49vw;
 width: 41px;
 height: 41px;
-background: url(../img/oval.svg) center center no-repeat;
+background: url(../img/server/oval.svg) center center no-repeat;
 background-size:41px;
 margin: 16px 0 0 -16px;
 }
@@ -70,7 +70,6 @@ margin: 16px 0 0 -16px;
 }
 .title{
     height:50vh;
-    background-image:url("../img/landscapes/3.1.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -91,7 +90,6 @@ margin: 16px 0 0 -16px;
 
 .container-about{
     height:95vh;
-    background-image: url("../img/history/history_1.png");
     background-position: top;
     background-size: cover;
     text-align: center;
@@ -107,7 +105,7 @@ margin: 16px 0 0 -16px;
     height: 95vh;
     margin-top:30px;
     margin-bottom:-30px;
-    background-image: url("../img/1.gif");
+    background-image: url("../img/server/1.gif");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -119,7 +117,7 @@ margin: 16px 0 0 -16px;
 }
 
 .divider{
-	background-image: url('../img/divider-pattern.png');
+	background-image: url('../img/server/divider-pattern.png');
 	background-repeat: repeat-x;
 	height: 4px;
 	width: 100%;
@@ -127,14 +125,14 @@ margin: 16px 0 0 -16px;
 
 .line{
     display: inline-block;
-	background-image: url('../img/line-pattern.png');
+	background-image: url('../img/server/line-pattern.png');
 	background-repeat: repeat-x;;
 	height: 2px;
 	width: 20%;
 }
 .line-yellow{
     display: inline-block;
-	background-image: url('../img/line-pattern-yellow.png');
+	background-image: url('../img/server/line-pattern-yellow.png');
 	background-repeat: repeat-x;
 	height: 2px;
 	width: 25%;
@@ -162,7 +160,6 @@ margin: 16px 0 0 -16px;
 .news{
     width:100%;
     height:90vh;
-    background-image: url('../img/backgrounds/fon_title2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: none;
@@ -331,18 +328,6 @@ footer{
 
 .footer h1{
     color: #fff;margin: 0 0; padding-top: 30px;font-size:75px
-}
-
-#social li a.instagram-icon{ /*rework*/
-	background-image: url(../img/icons/icon-instagram_1.png);
-	background-repeat: no-repeat;
-	display: block;
-	height: 96px;
-	width: 96px;
-}
-
-#social li a:hover.instagram-icon{
-	background-image: url(../img/icons/icon-instagram_2.png);
 }
 
 

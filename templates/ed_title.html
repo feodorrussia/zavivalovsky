@@ -1,0 +1,9 @@
+{% extends "ed_index.html" %}
+
+
+{% block tools %}
+    <div class="title_tools">
+        <input class="form-control" name="title" autocomplete="off" id="{{photo.query.filter_by(descr='container-title').first().id}}" placeholder="Текущая: {{photo.query.filter_by(descr='container-title').first().filename}}">
+        <img class="button" src="{{ url_for( 'static', filename='img/server/list.png')}}" style="cursor:pointer;margin-left:10px" height=50 width=55>
+    </div>
+{% endblock %}

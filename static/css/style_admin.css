@@ -24,6 +24,37 @@ p{
 }
 
 /*  Container's styles  */
+.popup {
+	position: absolute;
+	z-index:2;
+	height:200vh;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.7);
+	position:absolute;
+	z-index:3;
+	height:100%;
+	width:100%;
+}
+
+.searcher_body{
+    display:block;
+	position: relative;
+	vertical-align:top;
+    margin:10px auto;
+    padding-top:30px;
+    background-color:#fff;
+	z-index:4;
+    width:max-content;
+    height:max-content;
+}
+
 .display{
     display:inline-block;
     vertical-align:top;
@@ -32,25 +63,80 @@ p{
     margin: 0;
 }
     /* Display of the blocks */
+    /* index */
     .title{
         height:22vh;
+        width: 100%;
         background-position: center;
         background-position: bottom;
         background-size: cover;
         background-repeat: no-repeat;
     }
     .stallions{
+        height:22vh;
+        width: 100%;
+        background-position: center;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .about{
+        height:22vh;
+        width: 100%;
+        background-position: center;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .gallery{
+        height: 35vh;
+        width: 100%;
+        background-color: #303030;
+        padding-bottom: 20px;
+    }
+
+    #gallery .line-yellow{
+	    margin-bottom: 10px;
+    }
+
+        .image{
+            width:30%;
+            height: auto;
+            margin: 2px 6px;
+            cursor:pointer;
+            align-self:center;
+        }
+
+    .news{
+        height:22vh;
+        width: 100%;
+        background-position: center;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .contacts{
+        height:22vh;
+        width: 100%;
+        background-position: center;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
 .edit_field{
     display:inline-block;
-    vertical-align:top;
+    vertical-align:middle;
     width:50vw;
+    height:100vh;
     padding: 15px;
 }
     /* Display of the tools' block*/
     .title_tools{
-        
+        display: flex;
     }
 
 
