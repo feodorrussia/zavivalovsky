@@ -109,7 +109,7 @@
             {% for i in range(9) %}
             <div id="{{i+1}}" class="item" align="center">
                 <img class="carousel_img"
-                     src="{{ url_for( 'static', filename='img/gallery/'+photo.query.filter_by(descr='gallery',id=i).first().filename)}}"/>
+                     src="{{ url_for( 'static', filename='img/user/'+photo.query.filter_by(descr='gallery',id=i).first().filename)}}"/>
             </div>
             {% endfor %}
 
