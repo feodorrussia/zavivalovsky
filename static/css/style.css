@@ -70,7 +70,7 @@ margin: 16px 0 0 -16px;
 }
 .title{
     height:50vh;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }

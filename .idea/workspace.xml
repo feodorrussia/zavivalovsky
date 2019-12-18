@@ -6,12 +6,13 @@
       <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/little_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/little_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sqldatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqldatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/stallions/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/user/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/text_data/contacts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/contacts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/text_data/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/history.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ed_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/popcorn.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stallion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style_admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/contacts1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/contacts1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/stallion0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sale.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/workpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/workpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,22 +205,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="добавил __pycache__" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1576421777659">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1576696863585">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576421777659" />
-    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1576421777659">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576696863585" />
+    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1576696863585">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576421777659" />
-    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1576421777659">
+    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576696863585" />
+    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1576696863585">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576421777659" />
-    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1576421777659">
+    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576696863585" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1576696863585">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576421777659" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576696863585" />
   </component>
   <component name="masterDetails">
     <states>

@@ -1,0 +1,30 @@
+{% extends "workpage.html" %}
+
+
+{% block display %}
+    <div class="title" style="height:11vh;background-image: url({{'static/img/user/' + photo.query.filter_by(descr='sale').first().filename}})">
+        <h6 style="color:#ffc000;padding-top:20px;">НАШИ ЛОШАДИ</h6>
+    </div>
+    <div style="width:100%;height:20px;background-color:#707070;"></div>
+    <div class="title" style="height:max-content;min-height:15vh;max-height:22vh;background-color:#000">
+        <div style="width:50%;" align="center">
+            <p style="color: #fff;padding-top:10px;font-size:5px;">{{text}}</p>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block tools_block %}
+    <div class="about_tools">
+        <div style="display:flex">
+            <input class="form-control" name="background" autocomplete="off" id="{{photo.query.filter_by(descr='sale').first().id}}" placeholder="Текущая: {{photo.query.filter_by(descr='sale').first().filename}}">
+            <img class="button" src="{{ url_for( 'static', filename='img/server/list.png')}}" style="cursor:pointer;margin-left:10px" height=50 width=55>
+        </div>
+        <textarea style="margin-top:10px" name="text" rows="1" cols="85" wrap="virtual">{{text}}</textarea>
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}

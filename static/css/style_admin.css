@@ -105,7 +105,6 @@ p{
             width:30%;
             height: auto;
             margin: 2px 6px;
-            cursor:pointer;
             align-self:center;
         }
 
@@ -125,6 +124,18 @@ p{
         background-position: bottom;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    .title_horse{
+        height:auto;padding:30px 0;background-color: #101010;width: 100%;
+    }
+
+    .line-yellow{
+        display: inline-block;
+	    background-image: url('../img/server/line-pattern-yellow.png');
+	    background-repeat: repeat-x;
+	    height: 2px;
+	    width: 25%;
     }
 
 .edit_field{
