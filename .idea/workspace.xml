@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/text_data/foals.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/text_data/foals1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/text_data/heavy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/text_data/heavy1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/text_data/mares.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/text_data/mares1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/text_data/orlov.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/text_data/orlov1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ed_price_catalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ed_price_catalogs_disp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/little_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/little_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sqldatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqldatabase.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style_admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/img/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/logo1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/text_data/stallions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/stallions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/text_data/stallions1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/stallions1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/foals.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/foals.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/heavy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/heavy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mares.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mares.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/runners.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/runners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stallions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stallions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/workpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/workpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
