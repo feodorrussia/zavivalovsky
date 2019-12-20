@@ -1,0 +1,43 @@
+{% extends "workpage.html" %}
+
+
+{% block display %}
+    <div class="title_horse">
+        <img class="central" style="height:50px;" src="{{ url_for( 'static', filename='img/server/logo1.png')}}" alt="">
+    </div>
+    <div style="background-color:#000;"><div class="line-yellow" style="width:90%;"></div></div>
+
+    {% for i in range(length) %}
+        <div style="background-color:#000;height:max-content;width: 100%;padding:10px;cursor:pointer" onclick="location.href='/ed_price_catalog/{{breed[:-1]}}{{i}}'">
+            <div class="runner">
+            <div style="display:block;width: 35%;padding: 5px 10px;">
+                <img style="width: 90%;height:auto;padding: 5px 0px;" src="{{ url_for( 'static', filename='img/user/'+stallions[i][2][0])}}"/>
+            </div>
+
+            <div style="width:55%;height:22vh;margin-top:15px">
+                <h6 style="color:#ffc000" align="center">{{stallions[i][0]}}</h6>
+                {% for j in stallions[i][1][:-1] %}
+                    <p style="color: #fff;margin:2px;font-size:5px;">{{j}}</p>
+                {% endfor %}
+            </div>
+                <p style="color: #fff;margin:auto 5px;font-size:5px;">{{stallions[i][1][-1]}}</p>
+            </div>
+            <div class="line-yellow" style="width:90%;"></div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+{% block tools_block %}
+    {% block tools %}
+    {% endblock %}
+    <div class="line" style="background-color: #000;margin:20px;"></div>
+    <h2 style="width:max-content;cursor:pointer" onclick="location.href='/add_horse/{{breed}}'">Добавить лошадь</h2>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

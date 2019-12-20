@@ -282,6 +282,36 @@ def ed_catalog(breed):
         return redirect(f"/ed_catalog/{breed}")
 
 
+@app.route('/ed_price_catalog/<breed>', methods=['POST', 'GET'])
+def ed_price_catalog(breed):
+    if Admin.query.filter_by(id=0).first().status != 1:
+        return redirect("/login")
+    a = Files.query.all()
+    history = information_extractor(f"{breed[:-1]}.txt")
+    data = [i.split("\n/\n") for i in history]
+    for i in data:
+        i.append(i[2])
+        i.append("\n".join(i[1].split("\n")[:-1]))
+        i[2] = i[2].split("; ")
+        i[1] = i[1].split("\n")
+    if request.method == 'GET':
+        return render_template('ed_price_catalog.html', photo=Photo(), data=Data(), photos=Files(), stallions=data,
+                               stallion=data[int(breed[-1])],
+                               len=len(a), length=len(data), breed=breed)
+    elif request.method == 'POST':
+        title = request.form.get('title')
+        text = request.form.get('text')+"\n"+request.form.get('price')
+        text = "\n".join(text.split("\r\n"))
+        images = request.form.get('images')
+        if title != '':
+            stories = information_extractor(f"{breed[:-1]}.txt")
+            stories[int(breed[-1])] = "\n/\n".join([title.strip(), text.strip(), images.strip()])
+            file = open(f"static/text_data/{breed[:-1]}{divider}.txt", "w")
+            contacts = "\n/*/\n".join(stories)
+            file.write(contacts)
+        return redirect(f"/ed_price_catalog/{breed}")
+
+
 @app.route('/add_horse/<breed>', methods=['POST', 'GET'])
 def add_horse(breed):
     if Admin.query.filter_by(id=0).first().status != 1:
@@ -326,6 +356,15 @@ def file_upload():
             photo = Files(filename=file_name)
             db.session.add(photo)
             db.session.commit()
+        return redirect("/ed_title")
+
+@app.route('/delete_file', methods=['POST', 'GET'])
+def file_delete():
+    if Admin.query.filter_by(id=0).first().status != 1:
+        return redirect("/login")
+    if request.method == 'GET':
+        return redirect("/ed_title")
+    elif request.method == 'POST':
         return redirect("/ed_title")
 
 
