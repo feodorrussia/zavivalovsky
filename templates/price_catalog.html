@@ -31,7 +31,7 @@
     {% for i in horses %}
     <div class="runner" onclick="location.href='\popcorn'" style="cursor:pointer">
         {% for j in i[2] %}
-        <img src="{{ url_for( 'static', filename='img/stallions/'+j)}}" style="height:40vh;width:auto;"/>
+        <img src="{{ url_for( 'static', filename='img/user/'+j)}}" style="height:40vh;width:auto;"/>
         {% endfor %}
         <div>
             <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">{{i[0]}}</h1>
