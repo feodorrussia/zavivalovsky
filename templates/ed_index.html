@@ -20,7 +20,7 @@
         </div>
         {% endfor %}
     </div>
-    <div class="news" style="background-image: url({{'static/img/user/' + photo.query.filter_by(descr='news').first().filename}})" onclick="location.href='/ed_news'">
+    <div class="news" style="background-image: url({{'static/img/user/' + photo.query.filter_by(descr='news').first().filename}})" onclick="location.href='/ed_block_news'">
         <h6 style="color: #fff;padding-top:15%;margin-bottom:10px">НОВОСТИ</h6>
         <h6 style="color:#ffc000;">{{data.query.filter_by(name='news').first().descr}}</h6>
     </div>

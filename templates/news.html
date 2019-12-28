@@ -24,24 +24,22 @@
         <h1 style="color:#fff">НОВОСТИ</h1>
     </div>
     <!-- Начало -->
+    {% for i in history %}
     <div class="news_body">
         <div align="center">
-            <img class="news_image" src="{{ url_for( 'static', filename='img/gallery/HL_13.png')}}" alt="">
-        </div>
-        <div style="background: #000;width: -webkit-fill-available;height:40vh;margin: auto 20px;padding:1px">
-            <h1 style="color: #ffc000;" align="center">Заголовок</h1>
-            <p style="color: #fff;font-size:16px" align="center">Текст</p>
-        </div>
-    </div>
-    <div class="news_body">
-        <div align="center">
-            <img class="news_image" src="{{ url_for( 'static', filename='img/landscapes/3.1.png')}}" alt="">
+            {% for j in i[2] %}
+                <img class="news_image"
+                 src="{{ url_for( 'static', filename='img/user/'+j)}}" alt="">
+            {% endfor %}
         </div>
         <div style="background: #000;width: -webkit-fill-available;height:40vh;margin: auto 20px;padding:10px">
-            <h1 style="color: #ffc000;" align="center">Заголовок</h1>
-            <p style="color: #fff;font-size:16px" align="center">Текст</p>
+            <h1 style="color: #ffc000;" align="center">{{i[0]}}</h1>
+            {% for j in i[1] %}
+                <p style="color: #fff;margin-top:10px;font-size:18px;margin-left:20px;">{{j}}</p>
+            {% endfor %}
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
 

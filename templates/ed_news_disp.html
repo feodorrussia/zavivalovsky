@@ -1,0 +1,41 @@
+{% extends "workpage.html" %}
+
+
+{% block display %}
+    <div style="background-color:#000" align="center">
+        <h6 style="color:#fff;margin:0;padding-top:10px;">НОВОСТИ</h6>
+    </div>
+    {% for i in range(length) %}
+        <div style="width:100%;height:5px;background:#000"></div>
+        <div style="display:flex;background-color:#202020;height:max-content;width: 100%;padding-bottom:5px;cursor:pointer" onclick="location.href='/ed_news/{{i}}'">
+            <div style="display:block;width: 45%;padding: 5px 10px;">
+                {% for j in history[i][2] %}
+                    {% if j!="" %}
+                        <img style="width: 90%;height:auto;padding: 5px 0px;" src="{{ url_for( 'static', filename='img/user/'+j)}}"/>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div style="background-color:#000;width:50%;height:100%;margin-top:15px">
+                <h6 style="color:#ffc000;font-size:10px" align="center">{{history[i][0]}}</h6>
+                {% for j in history[i][1] %}
+                    <p style="color: #fff;margin-top:10px;font-size:5px;">{{j}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+{% block tools_block %}
+    {% block tools %}
+    {% endblock %}
+    <div class="line" style="background-color: #000;margin:20px;"></div>
+    <h2 style="width:max-content;cursor:pointer" onclick="location.href='/add_news_block'">Добавить блок</h2>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

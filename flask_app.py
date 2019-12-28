@@ -10,13 +10,19 @@ from db import Files
 from db import Photo
 from little_functions import *
 from login import LoginForm
+import os
 
 
 @app.route('/')
 @app.route('/index')
 def index():
     n = int(Data.query.filter_by(name='stallions').first().descr)
-    return render_template('index.html', photo=Photo(), data=Data(),
+    stallions = []
+    for i in range(4):
+        name = Data.query.filter_by(name=f'stallion{i}').first().descr
+        ind = Data.query.filter_by(name=name).first().descr
+        stallions.append(ind)
+    return render_template('index.html', photo=Photo(), data=Data(), stallions=stallions,
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr),
                            num=[str(i) for i in range(n)])
 
@@ -77,22 +83,6 @@ def ed_stallion(index):
         return redirect(f"/ed_stallion/{index}")
 
 
-@app.route('/add_stallion', methods=['POST', 'GET'])
-def add_stallion():
-    if Admin.query.filter_by(id=0).first().status != 1:
-        return redirect("/login")
-    n = int(Data.query.filter_by(name='stallions').first().descr)
-    file = open(f"static/text_data/stallion{n}{divider}.txt", "w")
-    file.write("КЛИЧКА\n/\nПорода: \nРодился \nРодители \nЦена: \n/\n3.jpg")
-    inf = Data(name=f"stallion{n}", descr="КЛИЧКА")
-    file = Photo(filename="3.jpg", descr=f"stallion{n}")
-    Data.query.filter_by(name='stallions').first().descr = str(n + 1)
-    db.session.add(inf)
-    db.session.add(file)
-    db.session.commit()
-    return redirect(f"/ed_stallion/{n}")
-
-
 @app.route('/ed_about', methods=['POST', 'GET'])
 def ed_about():
     if Admin.query.filter_by(id=0).first().status != 1:
@@ -115,14 +105,14 @@ def ed_about():
         return render_template('ed_about.html', photo=Photo(), data=Data(), len=lenght, photos=Files())
 
 
-@app.route('/ed_news', methods=['POST', 'GET'])
-def ed_news():
+@app.route('/ed_block_news', methods=['POST', 'GET'])
+def ed_block_news():
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
     a = Files.query.all()
     lenght = len(a)
     if request.method == 'GET':
-        return render_template('ed_news.html', photo=Photo(), data=Data(), len=lenght, photos=Files())
+        return render_template('ed_block_news.html', photo=Photo(), data=Data(), len=lenght, photos=Files())
     elif request.method == 'POST':
         filename = request.form.get('background')
         descr = request.form.get('title')
@@ -134,7 +124,7 @@ def ed_news():
             inf = Data.query.filter_by(name="news").first()
             inf.descr = descr.upper()
             db.session.commit()
-        return render_template('ed_news.html', photo=Photo(), data=Data(), len=lenght, photos=Files())
+        return render_template('ed_block_news.html', photo=Photo(), data=Data(), len=lenght, photos=Files())
 
 
 @app.route('/ed_gallery', methods=['POST', 'GET'])
@@ -212,9 +202,8 @@ def add_block():
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
     new_block = "\n/*/\nЗаголовок\n/\nТекст\n/\n"
-    file = open(f"static/text_data/history{divider}.txt", "r").read()
-    with open(f"static/text_data/history{divider}.txt", "w") as f:
-        f.write(file + new_block)
+    with open(f"static/text_data/history{divider}.txt", "a") as f:
+        f.write(new_block)
     return redirect("/ed_story/0")
 
 
@@ -229,6 +218,58 @@ def delete_block(index):
     with open(f"static/text_data/history{divider}.txt", "w") as f:
         f.write("\n/*/\n".join(file))
     return redirect("/ed_story/0")
+
+
+@app.route('/ed_news/<int:index>', methods=['POST', 'GET'])
+def ed_news(index):
+    if Admin.query.filter_by(id=0).first().status != 1:
+        return redirect("/login")
+    a = Files.query.all()
+    history = information_extractor("news.txt")
+    data = [i.split("\n/\n") for i in history]
+    for i in data:
+        i.append(i[2])
+        i.append("\n".join(i[1].split("\n\n")))
+        i[2] = i[2].split("; ")
+        i[1] = i[1].split("\n\n")
+    if request.method == 'GET':
+        return render_template('ed_news.html', photo=Photo(), data=Data(), photos=Files(), history=data,
+                               story=data[index],
+                               len=len(a), length=len(data), index=index)
+    elif request.method == 'POST':
+        title = request.form.get('title')
+        text = request.form.get('text')
+        images = request.form.get('images')
+        if title != '':
+            stories = information_extractor("news.txt")
+            stories[index] = "\n/\n".join([title.strip(), text.strip(), images.strip()])
+            file = open(f"static/text_data/news{divider}.txt", "w")
+            contacts = "\n/*/\n".join(stories)
+            file.write(contacts)
+        return redirect(f"/ed_news/{index}")
+
+
+@app.route('/add_news_block', methods=['POST', 'GET'])
+def add_news_block():
+    if Admin.query.filter_by(id=0).first().status != 1:
+        return redirect("/login")
+    new_block = "\n/*/\nЗаголовок\n/\nТекст\n/\ndefault.png"
+    with open(f"static/text_data/news{divider}.txt", "a") as f:
+        f.write(new_block)
+    return redirect("/ed_news/0")
+
+
+@app.route('/delete_news_block/<int:index>', methods=['POST', 'GET'])
+def delete_news_block(index):
+    if Admin.query.filter_by(id=0).first().status != 1:
+        return redirect("/login")
+    if index == 0:
+        return redirect("/ed_news/0")
+    file = information_extractor("news.txt")
+    del file[index]
+    with open(f"static/text_data/news{divider}.txt", "w") as f:
+        f.write("\n/*/\n".join(file))
+    return redirect("/ed_news/0")
 
 
 @app.route('/ed_sale', methods=['POST', 'GET'])
@@ -275,6 +316,13 @@ def ed_catalog(breed):
         images = request.form.get('images')
         if title != '':
             stories = information_extractor(f"{breed[:-1]}.txt")
+            horse = Data.query.filter_by(descr=breed).first()
+            if horse:
+                horse.name = title.strip()
+            else:
+                horse = Data(name=title.strip().upper(), descr=breed)
+                db.session.add(horse)
+            db.session.commit()
             stories[int(breed[-1])] = "\n/\n".join([title.strip(), text.strip(), images.strip()])
             file = open(f"static/text_data/{breed[:-1]}{divider}.txt", "w")
             contacts = "\n/*/\n".join(stories)
@@ -305,6 +353,13 @@ def ed_price_catalog(breed):
         images = request.form.get('images')
         if title != '':
             stories = information_extractor(f"{breed[:-1]}.txt")
+            horse = Data.query.filter_by(descr=breed).first()
+            if horse:
+                horse.name = title.strip().upper()
+            else:
+                horse = Data(name=title.strip().upper(), descr=breed)
+                db.session.add(horse)
+            db.session.commit()
             stories[int(breed[-1])] = "\n/\n".join([title.strip(), text.strip(), images.strip()])
             file = open(f"static/text_data/{breed[:-1]}{divider}.txt", "w")
             contacts = "\n/*/\n".join(stories)
@@ -316,12 +371,18 @@ def ed_price_catalog(breed):
 def add_horse(breed):
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
-    Data.query.filter_by(name='stallions_c').first().descr = str(n + 1)
-    new_block = "\n/*/\nКличка\n/\nДанные\n/\n"
-    file = open(f"static/text_data/{breed[:-1]}{divider}.txt", "r").read()
-    with open(f"static/text_data/{breed[:-1]}{divider}.txt", "w") as f:
-        f.write(file + new_block)
-    return redirect(f"/ed_catalog/{breed[:-1]}0")
+    new_block = "\n/*/\nКличка\n/\nДанные\nЦена\n/\npopcorn1.png"
+    print(breed)
+    file = open(f"static/text_data/{breed[:-2]}{divider}.txt", "r").read()
+    with open(f"static/text_data/{breed[:-2]}{divider}.txt", "a") as f:
+        f.write(new_block)
+    inf = Data(name="КЛИЧКА", descr=breed[:-1]+str(len(file.split("\n/*/\n"))))
+    db.session.add(inf)
+    db.session.commit()
+    if breed[-1] == "p":
+        return redirect(f"/ed_price_catalog/{breed[:-2]}0")
+    else:
+        return redirect(f"/ed_catalog/{breed[:-2]}0")
 
 
 @app.route('/delete_horse/<breed>', methods=['POST', 'GET'])
@@ -329,12 +390,21 @@ def delete_horse(breed):
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
     if index == 0:
-        return redirect(f"/ed_catalog/{breed[:-1]}0")
-    file = information_extractor(f"{breed[:-1]}.txt")
-    del file[int(breed[-1])]
-    with open(f"static/text_data/{breed[:-1]}{divider}.txt", "w") as f:
+        return redirect(f"/ed_catalog/{breed[:-2]}0")
+    file = information_extractor(f"{breed[:-2]}.txt")
+    del file[int(breed[-2])]
+    inf = Data.query.filter_by(descr=breed[:-2]).first()
+    db.session.delete(inf)
+    for i in file[int(breed[-2]):]:
+        n = Data.query.filter_by(name=i.split("\n/\n")[0].upper()).first().descr
+        Data.query.filter_by(name=i.split("\n/\n")[0].upper()).first().descr = n[:-1]+str(int(n[-1]) - 1)
+    db.session.commit()
+    with open(f"static/text_data/{breed[:-2]}{divider}.txt", "w") as f:
         f.write("\n/*/\n".join(file))
-    return redirect(f"/ed_catalog/{breed[:-1]}0")
+    if breed[-1] == "p":
+        return redirect(f"/ed_price_catalog/{breed[:-2]}0")
+    else:
+        return redirect(f"/ed_catalog/{breed[:-2]}0")
 
 
 
@@ -359,12 +429,21 @@ def file_upload():
         return redirect("/ed_title")
 
 @app.route('/delete_file', methods=['POST', 'GET'])
-def file_delete():
+def delete_file():
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
+    a = Files.query.all()
+    lenght = len(a)
     if request.method == 'GET':
-        return redirect("/ed_title")
+        return render_template('delete_file.html', len=lenght, photos=Files())
     elif request.method == 'POST':
+        filename = request.form.get('filename')
+        if Files.query.filter_by(filename=filename).all():
+            photo = Files.query.filter_by(filename=filename).first()
+            print(photo)
+            db.session.delete(photo)
+            db.session.commit()
+            os.remove(f"static/img/user/{filename}")
         return redirect("/ed_title")
 
 
@@ -390,9 +469,11 @@ def about():
                            history=data)
 
 
-@app.route('/stallion/<int:index>')
-def stallion(index):
-    file = information_extractor("stallion" + str(index) + ".txt")[0].split("\n/\n")
+@app.route('/stallion/<breed>')
+def stallion(breed):
+    file = information_extractor(breed[:-1] + ".txt")
+    print(file)
+    file=file[int(breed[-1])].split("\n/\n")
     file[1] = file[1].split("\n")
     file[2] = file[2].split("; ")
     return render_template('stallion.html', stallion=file,
@@ -407,43 +488,36 @@ def sale():
 
 @app.route('/news')
 def news():
+    history = information_extractor("news.txt")
+    data = [i.split("\n/\n") for i in history]
+    for i in data:
+        i.append(i[2])
+        i[2] = i[2].split("; ")
+        i[1] = i[1].split("\n\n")
     return render_template('news.html',
+                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr),
+                           history=data)
+
+
+@app.route('/price_catalog/<breed>')
+def price_catalog(breed):
+    horses = information_extractor(f"{breed}.txt")
+    data = [i.split("\n/\n") for i in horses]
+    for i in data:
+        i[2] = i[2].split("; ")
+        i[1] = i[1].split("\n")
+    return render_template('price_catalog.html', horses=data,
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 
-@app.route('/runners')
-def runners():
-    return render_template('runners.html',
-                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
-
-
-@app.route('/heavy')
-def heavy():
-    return render_template('heavy.html',
-                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
-
-
-@app.route('/heavy_ex')
-def heavy_ex():
-    return render_template('heavy_ex.html',
-                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
-
-
-@app.route('/stallions')
-def stallions():
-    return render_template('stallions.html',
-                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
-
-
-@app.route('/mares')
-def mares():
-    return render_template('mares.html',
-                           contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
-
-
-@app.route('/foals')
-def foals():
-    return render_template('foals.html',
+@app.route('/catalog/<breed>')
+def catalog(breed):
+    horses = information_extractor(f"{breed}.txt")
+    data = [i.split("\n/\n") for i in horses]
+    for i in data:
+        i[2] = i[2].split("; ")
+        i[1] = i[1].split("\n")
+    return render_template('catalog.html', horses=data,
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr))
 
 

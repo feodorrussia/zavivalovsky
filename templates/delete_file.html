@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{{ url_for( 'static', filename='css/style_admin.css')}}" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="popup">
+    <div class="popup_bg"></div>
+    <div class="searcher_body">
+        {% for i in range((len+2)//3) %}
+        <div style="display:flex;height:20vh;padding:10px 0">
+            {% for j in range(3) %}
+            {% if i*3+j < len %}
+            <div style="width:150px;margin:5px;">
+                <img src="{{ url_for( 'static', filename='img/user/'+photos.query.all()[i*3+j].filename)}}" height="70">
+                <h5>{{photos.query.all()[i*3+j].filename}}</h5>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div style="margin-top: 40vh; align:center">
+<form method="post" enctype="multipart/form-data">
+    <div style="display:flex">
+        <textarea name="filename" rows="1" cols="85" wrap="virtual"></textarea>
+        <img class="button" src="{{ url_for( 'static', filename='img/server/list.png')}}"
+             style="cursor:pointer;margin-left:10px" height=50 width=55>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Удалить</button><a class="navbar-brand" href="/ed_title">Главная</a>
+</form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='../js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+<script src="{{ url_for( 'static', filename='js/bootstrap.min.js')}}"></script>
+<script src="{{ url_for( 'static', filename='js/jquery.easing.1.3.js')}}"></script>
+<script>
+      $(document).ready(function() {
+        $('a[href^="#"]').click(function(event) {
+            var id = $(this).attr("href");
+            var offset = 60;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({scrollTop:target}, 800, $.easing.easeInOutExpo());
+            event.preventDefault();
+        });
+      });
+
+
+
+</script>
+{% block script %}{% endblock %}
+<script>
+    $(function(){
+        $(".button").click(function() {
+            $(".popup").css({"display":"block"})
+        });
+    })
+    $(function(){
+       $(".popup_bg").click(function() {
+           $(".popup").css({"display":"none"})
+       });
+    })
+    $(function(){
+        $(".button2").click(function() {
+            if ($(".links").css("display")=="none"){
+                $(".edits").css({"position":"absolute"});
+                $(".links").css({"display":"block"});}
+            else if ($(".links").css("display")=="block"){
+                $(".edits").css({"position":"fixed"});
+                $(".links").css({"display":"none"});}
+        });
+    })
+
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+</body>
+</html>

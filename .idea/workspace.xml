@@ -2,28 +2,102 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/text_data/foals.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/text_data/foals1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/text_data/heavy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/text_data/heavy1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/text_data/mares.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/text_data/mares1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/text_data/orlov.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/text_data/orlov1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ed_price_catalog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ed_price_catalogs_disp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sqldatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqldatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style_admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/server/logo1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/text_data/stallions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/stallions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/Hourses1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/arrow-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/backgrounds/fon_title.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/backgrounds/fon_title2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/backgrounds/news.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/download-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/fon_title1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/gallery/HL_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/gear-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/glyphicons-halflings-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/glyphicons-halflings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/19centery.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/19centery_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/20century.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/20century_ussr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/90.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/book.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/dawn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/dawn_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/history_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/ladyzhenskiy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/ussr_39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/history/vov.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/icon-instagram-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/icon-instagram-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/icon-instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/icon-instagram1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/logo_zav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/readmore_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/readmore_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icons/Читать.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/landscapes/2.2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/landscapes/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/landscapes/3.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/monitoring-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/multi-files-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slider/Hourses1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slider/arrow-l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slider/arrow-r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slider/icon-home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/social-media-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/staff/trainer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/1_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/2_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/3_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/4_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/dakar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/dakar1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/heavy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/kreker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/kreker1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/popcorn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/stallions/popcorn1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/foals1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/foals1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/heavy1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/heavy1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/mares1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/mares1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/orlov1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/orlov1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallion31.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/text_data/stallions1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/stallions1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/foals.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/foals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/heavy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/heavy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mares.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mares.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/runners.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/runners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stallions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stallions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_catalogs_disp.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_catalogs_disp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_block_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_price_catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_price_catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_price_catalogs_disp.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_price_catalogs_disp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/heavy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/runners.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/price_catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sale.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sale.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/workpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/workpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,22 +291,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="добавил __pycache__" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1576865494311">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1577536192568">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576865494311" />
-    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1576865494310">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577536192568" />
+    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1577536192568">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576865494310" />
-    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1576865494310">
+    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577536192568" />
+    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1577536192568">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576865494310" />
-    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1576865494311">
+    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577536192568" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1577536192568">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576865494311" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577536192568" />
   </component>
   <component name="masterDetails">
     <states>
