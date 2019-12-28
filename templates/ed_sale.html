@@ -20,7 +20,7 @@
             <input class="form-control" name="background" autocomplete="off" id="{{photo.query.filter_by(descr='sale').first().id}}" placeholder="Текущая: {{photo.query.filter_by(descr='sale').first().filename}}">
             <img class="button" src="{{ url_for( 'static', filename='img/server/list.png')}}" style="cursor:pointer;margin-left:10px" height=50 width=55>
         </div>
-        <textarea style="margin-top:10px" name="text" rows="1" cols="85" wrap="virtual">{{text}}</textarea>
+        <textarea style="margin-top:10px" name="text" rows="1" cols="70" wrap="virtual">{{text}}</textarea>
     </div>
 {% endblock %}
 

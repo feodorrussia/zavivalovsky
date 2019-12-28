@@ -4,10 +4,10 @@
 {% block tools %}
     <div class="about_tools">
         <div class="para_container">
-            <textarea name="title" rows="1" cols="85" wrap="virtual">{{story[0]}}</textarea>
-            <textarea name="text" rows="8" cols="85" wrap="virtual">{{story[4]}}</textarea>
+            <textarea name="title" rows="1" wrap="virtual">{{story[0]}}</textarea>
+            <textarea name="text" rows="8" cols="70" wrap="virtual">{{story[4]}}</textarea>
             <div style="display:flex">
-                <textarea name="images" rows="1" cols="85" wrap="virtual">{{story[3]}}</textarea>
+                <textarea name="images" rows="1" cols="70" wrap="virtual">{{story[3]}}</textarea>
                 <img class="button" src="{{ url_for( 'static', filename='img/server/list.png')}}"
                      style="cursor:pointer;margin-left:10px" height=50 width=55>
             </div>

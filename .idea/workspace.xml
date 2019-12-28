@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/little_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/little_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/text_data/stallions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/stallions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sale.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqldatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqldatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_price_catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_price_catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_sale.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_sale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ed_story.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_story.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stallions_ex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stallions_ex.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,22 +202,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="добавил __pycache__" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1577537935686">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1577538956390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577537935686" />
-    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1577537935686">
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577538956390" />
+    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1577538956390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577537935686" />
-    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1577537935685">
+    <state width="1344" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577538956390" />
+    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1577538956390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577537935685" />
-    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1577537935686">
+    <state width="1344" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577538956390" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1577538956390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577537935686" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577538956390" />
   </component>
   <component name="masterDetails">
     <states>
