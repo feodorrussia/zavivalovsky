@@ -156,7 +156,6 @@ def ed_contacts():
     lenght = len(a)
     contacts = information_extractor("contacts.txt")
     staff = [[x.split("\n") for x in i.split("\n/\n")] for i in contacts[1:]]
-    print(staff)
     if request.method == 'GET':
         return render_template('ed_contacts.html', photo=Photo(), data=Data(), len=lenght, photos=Files(),
                                contacts=contacts[0], staff=staff, length=len(staff),
@@ -238,7 +237,6 @@ def ed_story(index):
         if title != '':
             stories = information_extractor(f"history.txt")
             stories[index] = "\n/\n".join([title.strip(), text.strip(), images.strip()])
-            print(stories)
             file = open(f"static/text_data/history{divider}.txt", "w")
             contacts = "\n/*/\n".join(stories)
             file.write(contacts)
@@ -420,7 +418,6 @@ def add_horse(breed):
     if Admin.query.filter_by(id=0).first().status != 1:
         return redirect("/login")
     new_block = "\n/*/\nКличка\n/\nДанные\nЦена\n/\npopcorn1.png"
-    print(breed)
     file = open(f"static/text_data/{breed[:-2]}{divider}.txt", "r").read()
     with open(f"static/text_data/{breed[:-2]}{divider}.txt", "a") as f:
         f.write(new_block)
@@ -488,7 +485,6 @@ def delete_file():
         filename = request.form.get('filename')
         if Files.query.filter_by(filename=filename).all():
             photo = Files.query.filter_by(filename=filename).first()
-            print(photo)
             db.session.delete(photo)
             db.session.commit()
             os.remove(f"static/img/user/{filename}")
@@ -525,7 +521,6 @@ def stallion(breed):
     file[2] = file[2].split("; ")
     contacts = information_extractor("contacts.txt")
     staff = [[x.split("\n") for x in i.split("\n/\n")] for i in contacts[1:]]
-    print(staff)
     return render_template('stallion.html', stallion=file, staff=staff,
                            contacts=information_extractor(Data.query.filter_by(name="contacts").first().descr)[0].split("\n"))
 
