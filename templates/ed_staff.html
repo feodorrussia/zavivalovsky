@@ -1,0 +1,18 @@
+{% extends "ed_contacts_disp.html" %}
+
+
+{% block tools %}
+    <div style="display:flex">
+        <textarea rows="1" cols="70" wrap="virtual"style="margin-bottom:10px" name="image">{{contacts[0]}}</textarea>
+        <img class="button" src="{{ url_for( 'static', filename='img/server/list.png')}}" style="cursor:pointer;margin-left:10px" height=50 width=55>
+    </div>
+    <div class="contacts_tools">
+        <textarea name="contacts" rows="8" cols="70" wrap="virtual">{{contacts[1]}}</textarea>
+    </div>
+    {% if index != 0 %}
+        <div class="line" style="background-color: #000;margin:5px;"></div>
+        <h2 style="width:max-content;cursor:pointer" onclick="location.href='/delete_person/{{index}}'">Удалить контакт сотрудника</h2>
+    {% endif %}
+    <div class="line" style="background-color: #000;margin:5px;"></div>
+    <h2 style="width:max-content;cursor:pointer" onclick="location.href='/add_person'">Добавить контакт сотрудника</h2>
+{% endblock %}

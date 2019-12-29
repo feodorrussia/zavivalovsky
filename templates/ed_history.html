@@ -3,7 +3,7 @@
 
 {% block display %}
 <div class="title" onclick="location.href='/ed_story/{{0}}'" style="height:max-content;background-image: url({{'../static/img/user/' + photo.query.filter_by(descr='about').first().filename}});cursor:pointer">
-    <div style="background:rgba(0,0,0,0.5);height:max-content;width:70%;padding:5px 5px" align="center">
+    <div style="background:rgba(0,0,0,0.5);height:max-content;width:50%;padding:5px 5px" align="center">
         <h6 style="color:#ffc000;padding-bottom:10px;">{{history[0][0]}}</h6>
         {% for j in history[0][1] %}
             <p style="font-size:5px;color:#fff;margin-top:-15px;padding:0 12px">{{j}}</p>

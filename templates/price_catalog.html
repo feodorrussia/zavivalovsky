@@ -28,18 +28,18 @@
 <div class="runners">
     <div class="line-yellow" style="width:100%;margin: 15px 0"></div>
 
-    {% for i in horses %}
-    <div class="runner" onclick="location.href='\popcorn'" style="cursor:pointer">
-        {% for j in i[2] %}
+    {% for i in range(length) %}
+    <div class="runner" onclick="location.href='\stallion/' + breed + num[i]" style="cursor:pointer">
+        {% for j in horses[i][2] %}
         <img src="{{ url_for( 'static', filename='img/user/'+j)}}" style="height:40vh;width:auto;"/>
         {% endfor %}
         <div>
-            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">{{i[0]}}</h1>
-            {% for j in i[1][:-1] %}
+            <h1 style="color: #ffc000;padding-left: 10vw;padding-top: 30px;font-size:40px;">{{horses[i][0]}}</h1>
+            {% for j in horses[i][1][:-1] %}
             <p style="color: #fff;font-size:20px;padding-left: 7vw;">{{j}}</p>
             {% endfor %}
         </div>
-        <h2 style="color: #fff;margin: auto 50px">{{i[1][-1]}}</h2>
+        <h2 style="color: #fff;margin: auto 50px">{{horses[i][1][-1]}}</h2>
     </div>
 
     <div class="line-yellow" style="width:100%;margin: 15px 0"></div>

@@ -24,23 +24,13 @@
 </div>
 <!-- Contacts -->
 <div id="contacts" class="stlion_cont" style="" align="center">
+    {% for i in staff %}
     <div class="person">
-        <img style="width: 100%;" src="{{ url_for( 'static', filename='img/user/trainer.jpg')}}" alt="">
-        <p style="color: #fff;font-weight: 500">Директор ПКЗ "Завиваловский"</p>
-        <p style="color: #fff;font-weight: 300">И.И.Петров</p>
-        <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
+        <img style="width: 100%;" src="{{ url_for( 'static', filename='img/user/'+i[0][0])}}" alt="">
+        <p style="color: #fff;font-weight: 500">{{i[1][0]}}</p>
+        <p style="color: #fff;font-weight: 300">{{i[1][1]}}</p>
+        <p style="color: #fff;font-weight: 300">{{i[1][2]}}</p>
     </div>
-    <div class="person">
-        <img style="width: 100%;" src="{{ url_for( 'static', filename='img/user/trainer.jpg')}}" alt="">
-        <p style="color: #fff;font-weight: 500">Тренер</p>
-        <p style="color: #fff;font-weight: 300">И.О.Ф</p>
-        <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
-    </div>
-    <div class="person">
-        <img style="width: 100%;" src="{{ url_for( 'static', filename='img/user/trainer.jpg')}}" alt="">
-        <p style="color: #fff;font-weight: 500">Тренер</p>
-        <p style="color: #fff;font-weight: 300">И.О.Ф</p>
-        <p style="color: #fff;font-weight: 300">Телефон: +7 (***) ***-**-**</p>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}

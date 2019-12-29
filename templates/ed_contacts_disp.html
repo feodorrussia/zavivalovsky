@@ -1,0 +1,29 @@
+{% extends "workpage.html" %}
+
+
+{% block display %}
+    <div class="gallery" style="height:max-content;margin-bottom:5px">
+        <div style="display:flex;background-color:#606060;height:max-content;padding:0px 2px;margin:10px 2px" align="center">
+            {% for j in range(length) %}
+            <div style="width:auto;margin:auto;max-height:20vh;padding:5px 10px;">
+                <a href="{{'/ed_staff/'+num[j]}}"><img style="width:3vw" src="{{ url_for( 'static', filename='img/user/'+staff[j][0][0])}}" alt=""></a>
+                <p style="color: #fff;margin:0;font-size: 3px">{{staff[j][1][0]}}</p>
+                <p style="color: #fff;margin:0;font-size: 3px">{{staff[j][1][1]}}</p>
+                <p style="color: #fff;margin:0;font-size: 3px">{{staff[j][1][2]}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="stallions" style="background-image: url({{'static/img/server/contacts.png'}})" onclick="location.href='/ed_contacts'"></div>
+{% endblock %}
+
+
+{% block tools_block %}
+    {% block tools %}
+    {% endblock %}
+{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}
