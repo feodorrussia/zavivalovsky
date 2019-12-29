@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/little_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/little_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqldatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqldatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/text_data/contacts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/contacts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/text_data/contacts1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/contacts1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ed_contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ed_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ed_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ed_story.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ed_story.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/price_catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/price_catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stallions_ex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stallions_ex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/workpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/workpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
