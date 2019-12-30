@@ -69,18 +69,14 @@ def ed_stallion(index):
     elif request.method == 'POST':
         filename = request.form.get('background')
         name = request.form.get('name')
-        file = open(f"static/text_data/stallion{index}{divider}.txt", "r").read().split("\n/\n")
         if filename != '' and Files.query.filter_by(filename=filename).all():
-            file[2] = filename
             photo = Photo.query.filter_by(descr=f"stallion{index}").first()
             photo.filename = filename
             db.session.commit()
         if name != '':
-            file[0] = name
             inf = Data.query.filter_by(name=f"stallion{index}").first()
             inf.descr = name
             db.session.commit()
-        open(f"static/text_data/stallion{index}{divider}.txt", "w").write("\n/\n".join(file))
         return redirect(f"/ed_stallion/{index}")
 
 
