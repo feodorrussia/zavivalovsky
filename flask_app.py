@@ -75,7 +75,7 @@ def ed_stallion(index):
             db.session.commit()
         if name != '':
             inf = Data.query.filter_by(name=f"stallion{index}").first()
-            inf.descr = name
+            inf.descr = name.upper()
             db.session.commit()
         return redirect(f"/ed_stallion/{index}")
 
@@ -417,7 +417,7 @@ def add_horse(breed):
     file = open(f"static/text_data/{breed[:-2]}{divider}.txt", "r").read()
     with open(f"static/text_data/{breed[:-2]}{divider}.txt", "a") as f:
         f.write(new_block)
-    inf = Data(name="КЛИЧКА", descr=breed[:-1] + str(len(file.split("\n/*/\n"))))
+    inf = Data(name="КЛИЧКА", descr=breed[:-2] + str(len(file.split("\n/*/\n"))))
     db.session.add(inf)
     db.session.commit()
     if breed[-1] == "p":
