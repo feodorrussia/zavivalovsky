@@ -434,7 +434,7 @@ def delete_horse(breed):
         return redirect(f"/ed_catalog/{breed[:-2]}0")
     file = information_extractor(f"{breed[:-2]}.txt")
     del file[int(breed[-2])]
-    inf = Data.query.filter_by(descr=breed[:-2]).first()
+    inf = Data.query.filter_by(descr=breed[:-1]).first()
     db.session.delete(inf)
     for i in file[int(breed[-2]):]:
         n = Data.query.filter_by(name=i.split("\n/\n")[0].upper()).first().descr

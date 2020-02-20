@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c68d4e4-8549-408f-b6b1-9f5693fabea5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/little_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/little_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/carusel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqldatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqldatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/text_data/stallions1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/text_data/stallions1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +42,15 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Python\Project\zavivalovsky\static\img\user" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Python\Project\zavivalovsky\static\js" />
       <recent name="E:\Python\Project\zavivalovsky\static\img\server" />
       <recent name="E:\Python\Project\zavivalovsky\static\img\user" />
       <recent name="E:\Python\Project\zavivalovsky\static\img\slider" />
       <recent name="E:\Python\Project\zavivalovsky\static\img\icons" />
-      <recent name="E:\Python\Project\zavivalovsky\static\img\backgrounds" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Python\Project\zavivalovsky\static\img\user" />
     </key>
   </component>
   <component name="RunManager" selected="Python.flask_app">
@@ -202,22 +207,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579629378135" />
-    <state width="1345" height="138" key="GridCell.Tab.0.bottom" timestamp="1581257203890">
+    <state width="1345" height="138" key="GridCell.Tab.0.bottom" timestamp="1582182307797">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581257203890" />
-    <state width="1345" height="138" key="GridCell.Tab.0.center" timestamp="1581257203890">
+    <state width="1345" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582182307797" />
+    <state width="1345" height="138" key="GridCell.Tab.0.center" timestamp="1582182307796">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581257203890" />
-    <state width="1345" height="138" key="GridCell.Tab.0.left" timestamp="1581257203890">
+    <state width="1345" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582182307796" />
+    <state width="1345" height="138" key="GridCell.Tab.0.left" timestamp="1582182307796">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581257203890" />
-    <state width="1345" height="138" key="GridCell.Tab.0.right" timestamp="1581257203890">
+    <state width="1345" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582182307796" />
+    <state width="1345" height="138" key="GridCell.Tab.0.right" timestamp="1582182307797">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581257203890" />
+    <state width="1345" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582182307797" />
   </component>
   <component name="masterDetails">
     <states>

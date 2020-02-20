@@ -164,9 +164,10 @@
             $(".popup").css({"display":"block"})
         });
      })
-     $(function(){
+    $(function(){
         $(".popup_bg").click(function() {
-            $(".popup").css({"display":"none"})
+            $("div").removeClass('item active').addClass("item");
+            $(".popup").css({"display":"none"});
         });
     })
 </script>
